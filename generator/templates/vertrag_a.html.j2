@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+{{ css }}
+body { font-family: "DejaVu Serif", "Liberation Serif", Georgia, serif; font-size: 10pt; text-align: justify; }
+h1 { text-align: center; font-size: 16pt; margin-bottom: 1mm; }
+.nr { text-align: center; margin-bottom: 8mm; }
+.partei { margin: 0 0 3mm 10mm; }
+.zwischen { text-align: center; margin: 3mm 0; }
+.sig { display: flex; justify-content: space-between; margin-top: 18mm; }
+.sig div { width: 45%; border-top: 0.5pt solid #111; padding-top: 1mm; font-size: 8.5pt; }
+</style>
+</head>
+<body>
+<h1>Dienstleistungsvertrag</h1>
+<div class="nr">Vertragsnummer: {{ gt.vertragsnummer }}</div>
+
+<p>zwischen</p>
+<p class="partei">{{ gt.auftraggeber.name }}<br>{{ gt.auftraggeber.strasse }}, {{ gt.auftraggeber.plz }} {{ gt.auftraggeber.ort }}<br>– nachfolgend „Auftraggeber“ –</p>
+<p class="zwischen">und</p>
+<p class="partei">{{ gt.auftragnehmer.name }}<br>{{ gt.auftragnehmer.strasse }}, {{ gt.auftragnehmer.plz }} {{ gt.auftragnehmer.ort }}<br>– nachfolgend „Auftragnehmer“ –</p>
+<p>wird folgender Vertrag geschlossen:</p>
+
+{% for titel, absaetze in r.paragraphen %}
+<h2>§ {{ loop.index }} {{ titel }}</h2>
+{% for a in absaetze %}<p>({{ loop.index }}) {{ a }}</p>{% endfor %}
+{% endfor %}
+
+<p style="margin-top:8mm">{{ gt.auftraggeber.ort }}, den {{ r.vertragsdatum_text }}</p>
+<div class="sig">
+  <div>{{ r.unterzeichner_ag }}<br>für den Auftraggeber</div>
+  <div>{{ r.unterzeichner_an }}<br>für den Auftragnehmer</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+{{ css }}
+.kopf { display: flex; justify-content: space-between; margin-bottom: 12mm; }
+.absender { font-size: 7.5pt; color: #444; border-bottom: 0.5pt solid #888; margin-bottom: 2mm; }
+.firma { text-align: right; }
+.firma strong { font-size: 12pt; }
+.infos td { padding: 0.5mm 0 0.5mm 4mm; }
+.pos th { border-bottom: 1pt solid #111; text-align: left; padding: 1.5mm 1mm; }
+.pos td { border-bottom: 0.4pt solid #ccc; padding: 1.5mm 1mm; vertical-align: top; }
+.pos .num { text-align: right; white-space: nowrap; }
+.summen { width: 75mm; margin-left: auto; margin-top: 4mm; }
+.summen td { padding: 1mm; }
+.summen tr.brutto td { border-top: 1pt solid #111; font-weight: bold; }
+.fuss { margin-top: 14mm; border-top: 0.5pt solid #888; padding-top: 2mm; display: flex; gap: 10mm; }
+</style>
+</head>
+<body>
+<div class="kopf">
+  <div>
+    <div class="absender">{{ gt.lieferant.name }} · {{ gt.lieferant.strasse }} · {{ gt.lieferant.plz }} {{ gt.lieferant.ort }}</div>
+    {{ gt.kunde.name }}<br>
+    {{ gt.kunde.strasse }}<br>
+    {{ gt.kunde.plz }} {{ gt.kunde.ort }}
+  </div>
+  <div class="firma">
+    <strong>{{ gt.lieferant.name }}</strong><br>
+    {{ gt.lieferant.strasse }}<br>
+    {{ gt.lieferant.plz }} {{ gt.lieferant.ort }}<br>
+    Tel. {{ r.telefon }}
+  </div>
+</div>
+
+<h1>Rechnung</h1>
+<table class="infos" style="width:auto; margin-bottom: 6mm;">
+  <tr><td style="padding-left:0">Rechnungsnummer:</td><td>{{ gt.rechnungsnummer }}</td></tr>
+  <tr><td style="padding-left:0">Rechnungsdatum:</td><td>{{ fmt_date(gt.rechnungsdatum) }}</td></tr>
+  <tr><td style="padding-left:0">Leistungsdatum:</td><td>{{ fmt_date(gt.leistungsdatum) }}</td></tr>
+  <tr><td style="padding-left:0">Kundennummer:</td><td>{{ r.kundennummer }}</td></tr>
+  <tr><td style="padding-left:0">Ansprechpartner:</td><td>{{ r.ansprechpartner }}</td></tr>
+</table>
+
+<p>Sehr geehrte Damen und Herren,<br>für unsere Leistungen erlauben wir uns, Ihnen Folgendes in Rechnung zu stellen:</p>
+
+<table class="pos">
+  <tr><th>Pos.</th><th>Beschreibung</th><th class="num">Menge</th><th>Einheit</th><th class="num">Einzelpreis</th><th class="num">Gesamt</th></tr>
+  {% for p in gt.positionen %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ p.beschreibung }}</td>
+    <td class="num">{{ fmt_menge(p.menge) }}</td>
+    <td>{{ p.einheit }}</td>
+    <td class="num">{{ fmt_eur(p.einzelpreis) }}</td>
+    <td class="num">{{ fmt_eur(p.gesamtpreis) }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<table class="summen">
+  <tr><td>Nettobetrag</td><td class="right">{{ fmt_eur(gt.netto) }}</td></tr>
+  <tr><td>zzgl. {{ gt.ust_satz }} % USt.</td><td class="right">{{ fmt_eur(gt.ust_betrag) }}</td></tr>
+  <tr class="brutto"><td>Rechnungsbetrag</td><td class="right">{{ fmt_eur(gt.brutto) }}</td></tr>
+</table>
+
+<p style="margin-top:6mm">
+{% if gt.iban %}Bitte überweisen Sie den Rechnungsbetrag innerhalb von {{ gt.zahlungsziel_tage }} Tagen ohne Abzug auf das unten angegebene Konto.
+{% else %}Der Rechnungsbetrag ist innerhalb von {{ gt.zahlungsziel_tage }} Tagen ohne Abzug zahlbar.
+{% endif %}
+Bitte geben Sie bei Zahlung die Rechnungsnummer an.</p>
+<p>Mit freundlichen Grüßen<br>{{ gt.lieferant.name }}</p>
+
+<div class="fuss small">
+  <div>{{ gt.lieferant.name }}<br>{{ gt.lieferant.strasse }}<br>{{ gt.lieferant.plz }} {{ gt.lieferant.ort }}</div>
+  <div>USt-IdNr.: {{ gt.lieferant_ust_id }}</div>
+  {% if gt.iban %}<div>IBAN: {{ fmt_iban(gt.iban) }}<br>BIC: {{ gt.bic }}</div>{% endif %}
+</div>
+</body>
+</html>

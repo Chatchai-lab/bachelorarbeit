@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bachelorarbeit"
+version = "0.1.0"
+description = "Quality-Gates für LLM-Pipelines: Halluzinationserkennung bei der Extraktion deutschsprachiger Rechnungen und Verträge"
+authors = [{ name = "Chatchai Sirichot" }]
+requires-python = ">=3.11"
+dependencies = [
+    "faker>=30",
+    "jinja2>=3.1",
+    "weasyprint>=62",
+    "pdfplumber>=0.11",
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+modal = ["modal>=1.0"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["common*", "generator*", "extraction*"]
+
+[tool.setuptools.package-data]
+generator = ["templates/*.j2", "templates/*.css"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
