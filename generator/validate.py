@@ -43,6 +43,10 @@ def missing_values(gt, raw_text: str) -> list[str]:
         anschrift("lieferant", gt.lieferant)
         anschrift("kunde", gt.kunde)
         need("lieferant_ust_id", N.string_in_doc(gt.lieferant_ust_id, doc))
+        if gt.bestellnummer:
+            need("bestellnummer", N.string_in_doc(gt.bestellnummer, doc))
+        else:
+            need("keine bestellnummer im dokument", "bestellnummer" not in doc)
         for i, p in enumerate(gt.positionen, 1):
             zeile = _flat(f"{p.beschreibung} {format_menge(p.menge)} {p.einheit} "
                           f"{format_eur(p.einzelpreis)} {format_eur(p.gesamtpreis)}")
@@ -57,7 +61,10 @@ def missing_values(gt, raw_text: str) -> list[str]:
         else:
             need("keine iban im dokument", "iban" not in doc)
     else:
-        need("vertragsnummer", N.string_in_doc(gt.vertragsnummer, doc))
+        if gt.vertragsnummer:
+            need("vertragsnummer", N.string_in_doc(gt.vertragsnummer, doc))
+        else:
+            need("keine vertragsnummer im dokument", "vertragsnummer" not in doc)
         need("vertragsdatum", N.date_in_doc(gt.vertragsdatum, doc))
         anschrift("auftraggeber", gt.auftraggeber)
         anschrift("auftragnehmer", gt.auftragnehmer)

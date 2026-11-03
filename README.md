@@ -39,7 +39,7 @@ pytest             # alle Tests sollten durchlaufen
 
 ## Vorversuch
 
-1. **Datensatz erzeugen** (lokal, je 10 Dokumente, ca. 25 % ohne optionale Felder):
+1. **Datensatz erzeugen** (lokal; jede optionale Feldgruppe fehlt bei 30 % der Dokumente, unabhängig voneinander):
 
    ```bash
    python -m generator --name vorversuch --n-rechnung 10 --n-vertrag 10 --seed 42

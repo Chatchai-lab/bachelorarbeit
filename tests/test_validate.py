@@ -9,7 +9,7 @@ from generator.validate import missing_values  # noqa: E402
 
 def _rechnung():
     rng, fake = make_rng(derive_seed("validate", 1))
-    gt, _ = make_invoice(rng, fake, True)
+    gt, _ = make_invoice(rng, fake)
     return gt
 
 
@@ -24,7 +24,7 @@ def test_sauberer_text_besteht():
             f"Rechnungsnummer: {gt.rechnungsnummer} {format_date(gt.rechnungsdatum)} {format_date(gt.leistungsdatum)}\n"
             f"{pos}\n{format_eur(gt.netto)} {gt.ust_satz} % {format_eur(gt.ust_betrag)} {format_eur(gt.brutto)}\n"
             f"innerhalb von {gt.zahlungsziel_tage} Tagen USt-IdNr.: {gt.lieferant_ust_id} "
-            f"IBAN: {format_iban(gt.iban)} BIC: {gt.bic}")
+            f"IBAN: {format_iban(gt.iban)} BIC: {gt.bic} Ihre Bestellnummer: {gt.bestellnummer}")
     assert missing_values(gt, text) == []
 
 

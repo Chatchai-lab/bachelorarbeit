@@ -15,7 +15,7 @@ h1 { text-align: center; font-size: 16pt; margin-bottom: 1mm; }
 </head>
 <body>
 <h1>Dienstleistungsvertrag</h1>
-<div class="nr">Vertragsnummer: {{ gt.vertragsnummer }}</div>
+{% if gt.vertragsnummer %}<div class="nr">Vertragsnummer: {{ gt.vertragsnummer }}</div>{% else %}<div class="nr">&nbsp;</div>{% endif %}
 
 <p>zwischen</p>
 <p class="partei">{{ gt.auftraggeber.name }}<br>{{ gt.auftraggeber.strasse }}, {{ gt.auftraggeber.plz }} {{ gt.auftraggeber.ort }}<br>– nachfolgend „Auftraggeber“ –</p>

@@ -118,8 +118,13 @@ def _fristsatz(rng: random.Random, n: int, einheit: str, zeitpunkt: str) -> str:
     return rng.choice(varianten)
 
 
-def make_contract(rng: random.Random, fake: Faker, mit_verlaengerung: bool) -> tuple[Vertrag, dict]:
-    """Erzeugt einen Vertrag und die fertigen Abschnitte für das Template."""
+def make_contract(rng: random.Random, fake: Faker, fehlend: frozenset[str] = frozenset()) -> tuple[Vertrag, dict]:
+    """Erzeugt einen Vertrag und die fertigen Abschnitte für das Template.
+
+    fehlend: Namen optionaler Feldgruppen, die im Dokument fehlen sollen
+    (siehe common.schemas.OPTIONAL_GROUPS).
+    """
+    mit_verlaengerung = "verlaengerung" not in fehlend
     leistung = rng.choice(LEISTUNGEN)
     intervall = rng.choices(list(INTERVALLE), weights=[6, 3, 1])[0]
     monatspreis = rng.uniform(*leistung["preis"])
@@ -141,6 +146,8 @@ def make_contract(rng: random.Random, fake: Faker, mit_verlaengerung: bool) -> t
 
     auftraggeber, auftragnehmer = zwei_firmen(fake)
     nummer = f"DV-{beginn.year}-{rng.randint(100, 9999):04d}"
+    if "vertragsnummer" in fehlend:
+        nummer = None
 
     gt = Vertrag(
         vertragsnummer=nummer,

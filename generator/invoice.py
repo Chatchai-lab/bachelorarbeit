@@ -60,8 +60,19 @@ _NUMMER_FORMATE = [
 ]
 
 
-def make_invoice(rng: random.Random, fake: Faker, mit_bank: bool) -> tuple[Rechnung, dict]:
-    """Erzeugt eine Rechnung und Darstellungsdetails für das Template."""
+_BESTELL_FORMATE = [
+    lambda rng: f"PO-{rng.randint(2024, 2026)}-{rng.randint(1, 9999):04d}",
+    lambda rng: f"45{rng.randint(0, 99999999):08d}",
+    lambda rng: f"B{rng.randint(10000, 99999)}",
+]
+
+
+def make_invoice(rng: random.Random, fake: Faker, fehlend: frozenset[str] = frozenset()) -> tuple[Rechnung, dict]:
+    """Erzeugt eine Rechnung und Darstellungsdetails für das Template.
+
+    fehlend: Namen optionaler Feldgruppen, die im Dokument fehlen sollen
+    (siehe common.schemas.OPTIONAL_GROUPS).
+    """
     branche = rng.choice(list(KATALOG))
     # 7 % nur bei Catering plausibel (vereinfachend), sonst 19 %
     ust_satz = 7 if branche == "Catering" and rng.random() < 0.5 else 19
@@ -91,8 +102,9 @@ def make_invoice(rng: random.Random, fake: Faker, mit_bank: bool) -> tuple[Rechn
     brutto = netto + ust_betrag
 
     iban = bic = None
-    if mit_bank:
+    if "bank" not in fehlend:
         iban, bic = bankverbindung(rng)
+    bestellnummer = None if "bestellnummer" in fehlend else rng.choice(_BESTELL_FORMATE)(rng)
 
     lieferant, kunde = zwei_firmen(fake)
 
@@ -109,6 +121,7 @@ def make_invoice(rng: random.Random, fake: Faker, mit_bank: bool) -> tuple[Rechn
         ust_betrag=float(ust_betrag),
         brutto=float(brutto),
         zahlungsziel_tage=rng.choice([7, 14, 14, 30, 30]),
+        bestellnummer=bestellnummer,
         iban=iban,
         bic=bic,
     )

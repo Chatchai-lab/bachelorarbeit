@@ -26,7 +26,7 @@ from datetime import datetime, timezone
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 
-from common.schemas import OPTIONAL_FIELDS
+from common.schemas import OPTIONAL_GROUPS
 
 from . import GENERATOR_VERSION
 from .common import derive_seed, make_rng
@@ -54,12 +54,15 @@ def _git_commit() -> str | None:
         return None
 
 
-def missing_indices(seed: int, doc_type: str, n: int, rate: float) -> set[int]:
-    """Fester Anteil: genau round(n * rate) Dokumente ohne optionale Felder."""
+def missing_indices(seed: int, doc_type: str, n: int, rate: float, group: str = "") -> set[int]:
+    """Fester Anteil: genau n * rate (kaufmännisch gerundet) Dokumente ohne diese Feldgruppe.
+
+    Jede Gruppe wird unabhängig ausgelost, sodass Lücken in verschiedenen
+    Kombinationen auftreten."""
     import random
 
     k = int(n * rate + 0.5)  # kaufmännisch runden (round() rundet 2,5 auf 2)
-    return set(random.Random(derive_seed(seed, doc_type, "missing")).sample(range(1, n + 1), k))
+    return set(random.Random(derive_seed(seed, doc_type, "missing", group)).sample(range(1, n + 1), k))
 
 
 def generate(name: str, counts: dict[str, int], seed: int, missing_rate: float, out_root: Path, pdf: bool = True) -> Path:
@@ -67,12 +70,13 @@ def generate(name: str, counts: dict[str, int], seed: int, missing_rate: float, 
     out.mkdir(parents=True, exist_ok=True)
     docs = []
     for doc_type, n in counts.items():
-        ohne = missing_indices(seed, doc_type, n, missing_rate)
+        ohne = {g: missing_indices(seed, doc_type, n, missing_rate, g) for g in OPTIONAL_GROUPS[doc_type]}
         for i in range(1, n + 1):
             doc_id = f"{doc_type}_{i:04d}"
             doc_seed = derive_seed(seed, doc_type, i)
             rng, fake = make_rng(doc_seed)
-            gt, render = MAKERS[doc_type](rng, fake, i not in ohne)
+            fehlend = frozenset(g for g, idx in ohne.items() if i in idx)
+            gt, render = MAKERS[doc_type](rng, fake, fehlend)
             layout = LAYOUTS[doc_type][rng.randrange(len(LAYOUTS[doc_type]))]
             render["layout"] = layout
 
@@ -95,10 +99,10 @@ def generate(name: str, counts: dict[str, int], seed: int, missing_rate: float, 
                 "doc_type": doc_type,
                 "seed": doc_seed,
                 "layout": layout,
-                "optionale_felder_fehlen": i in ohne,
-                "fehlende_felder": OPTIONAL_FIELDS[doc_type] if i in ohne else [],
+                "fehlende_gruppen": sorted(fehlend),
+                "fehlende_felder": [f for g in sorted(fehlend) for f in OPTIONAL_GROUPS[doc_type][g]],
             })
-            print(f"  {doc_id}  {'(ohne optionale Felder)' if i in ohne else ''}")
+            print(f"  {doc_id}  {'ohne: ' + ', '.join(sorted(fehlend)) if fehlend else ''}")
 
     manifest = {
         "name": name,
@@ -122,7 +126,7 @@ def main() -> None:
     ap.add_argument("--n-rechnung", type=int, default=10)
     ap.add_argument("--n-vertrag", type=int, default=10)
     ap.add_argument("--seed", type=int, default=42)
-    ap.add_argument("--missing-rate", type=float, default=0.25, help="Anteil ohne optionale Felder (0.2 bis 0.3)")
+    ap.add_argument("--missing-rate", type=float, default=0.3, help="Anteil ohne die jeweilige optionale Feldgruppe (0.2 bis 0.3)")
     ap.add_argument("--out", type=Path, default=Path("data/datasets"))
     ap.add_argument("--no-pdf", action="store_true", help="nur JSON und HTML (zum schnellen Testen)")
     args = ap.parse_args()

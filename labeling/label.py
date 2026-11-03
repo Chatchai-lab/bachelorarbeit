@@ -40,7 +40,7 @@ FIELDS = {
         "lieferant": ANSCHRIFT, "lieferant_ust_id": "id", "kunde": ANSCHRIFT,
         "positionen": [POSITION],
         "netto": "number", "ust_satz": "number", "ust_betrag": "number", "brutto": "number",
-        "zahlungsziel_tage": "number", "iban": "id", "bic": "id",
+        "zahlungsziel_tage": "number", "bestellnummer": "id", "iban": "id", "bic": "id",
     },
     "vertrag": {
         "vertragsnummer": "id", "vertragsdatum": "date",

@@ -16,16 +16,16 @@ from generator.render import render_html  # noqa: E402
 D = Decimal
 
 
-def _invoices(n=200, mit_bank=True):
+def _invoices(n=200, fehlend=frozenset()):
     for i in range(n):
         rng, fake = make_rng(derive_seed("test", i))
-        yield make_invoice(rng, fake, mit_bank)
+        yield make_invoice(rng, fake, fehlend)
 
 
-def _contracts(n=200, mit_verl=True):
+def _contracts(n=200, fehlend=frozenset()):
     for i in range(n):
         rng, fake = make_rng(derive_seed("test-v", i))
-        yield make_contract(rng, fake, mit_verl)
+        yield make_contract(rng, fake, fehlend)
 
 
 def test_rechnung_rechnerisch_korrekt():
@@ -40,10 +40,13 @@ def test_rechnung_rechnerisch_korrekt():
 
 
 def test_rechnung_iban_gueltig_oder_fehlend():
-    for gt, _ in _invoices(50, mit_bank=True):
-        assert is_valid_iban(gt.iban) and gt.bic
-    for gt, _ in _invoices(20, mit_bank=False):
-        assert gt.iban is None and gt.bic is None
+    for gt, _ in _invoices(50):
+        assert is_valid_iban(gt.iban) and gt.bic and gt.bestellnummer
+    for gt, _ in _invoices(20, fehlend=frozenset({"bank"})):
+        assert gt.iban is None and gt.bic is None and gt.bestellnummer
+    for gt, r in _invoices(20, fehlend=frozenset({"bestellnummer"})):
+        assert gt.bestellnummer is None and gt.iban
+        assert "Bestellnummer" not in render_html("rechnung_a.html.j2", gt, r)
 
 
 def test_vertrag_logik():
@@ -52,16 +55,19 @@ def test_vertrag_logik():
         assert gt.vertragsende == add_months(gt.vertragsbeginn, gt.laufzeit_monate) - timedelta(days=1)
         assert gt.vertragsdatum < gt.vertragsbeginn
         assert gt.auftraggeber.name != gt.auftragnehmer.name
-    for gt, r in _contracts(20, mit_verl=False):
-        assert gt.verlaengerung is None
+    for gt, r in _contracts(20, fehlend=frozenset({"verlaengerung"})):
+        assert gt.verlaengerung is None and gt.vertragsnummer
         assert all(t != "Vertragsverlängerung" for t, _ in r["paragraphen"])
+    for gt, r in _contracts(20, fehlend=frozenset({"vertragsnummer"})):
+        assert gt.vertragsnummer is None and gt.verlaengerung
+        assert "Vertragsnummer" not in render_html("vertrag_a.html.j2", gt, r)
 
 
 def test_werte_stehen_im_dokument():
     """Jeder Ground-Truth-Wert muss im Dokument vorkommen, sonst wäre er nicht extrahierbar."""
     for gt, r in _invoices(30):
         html = render_html("rechnung_a.html.j2", gt, r)
-        for wert in [gt.rechnungsnummer, gt.lieferant_ust_id, format_eur(gt.brutto), format_eur(gt.netto), gt.bic]:
+        for wert in [gt.rechnungsnummer, gt.lieferant_ust_id, format_eur(gt.brutto), format_eur(gt.netto), gt.bic, gt.bestellnummer]:
             assert wert.replace("&", "&amp;") in html
     for gt, r in _contracts(30):
         html = render_html("vertrag_a.html.j2", gt, r)
@@ -76,8 +82,11 @@ def test_reproduzierbar():
 
 
 def test_fester_anteil_fehlender_felder():
-    assert len(missing_indices(42, "rechnung", 40, 0.25)) == 10
-    assert missing_indices(42, "rechnung", 40, 0.25) == missing_indices(42, "rechnung", 40, 0.25)
+    assert len(missing_indices(42, "rechnung", 50, 0.3, "bank")) == 15
+    assert len(missing_indices(42, "rechnung", 10, 0.25, "bank")) == 3  # 2,5 kaufmännisch auf 3
+    assert missing_indices(42, "rechnung", 40, 0.3, "bank") == missing_indices(42, "rechnung", 40, 0.3, "bank")
+    # Gruppen werden unabhängig ausgelost
+    assert missing_indices(42, "rechnung", 50, 0.3, "bank") != missing_indices(42, "rechnung", 50, 0.3, "bestellnummer")
 
 
 def test_generate_ohne_pdf(tmp_path):

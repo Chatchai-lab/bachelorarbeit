@@ -40,6 +40,7 @@
   <tr><td style="padding-left:0">Rechnungsdatum:</td><td>{{ fmt_date(gt.rechnungsdatum) }}</td></tr>
   <tr><td style="padding-left:0">Leistungsdatum:</td><td>{{ fmt_date(gt.leistungsdatum) }}</td></tr>
   <tr><td style="padding-left:0">Kundennummer:</td><td>{{ r.kundennummer }}</td></tr>
+  {% if gt.bestellnummer %}<tr><td style="padding-left:0">Ihre Bestellnummer:</td><td>{{ gt.bestellnummer }}</td></tr>{% endif %}
   <tr><td style="padding-left:0">Ansprechpartner:</td><td>{{ r.ansprechpartner }}</td></tr>
 </table>
 

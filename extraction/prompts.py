@@ -16,7 +16,7 @@ from __future__ import annotations
 import hashlib
 import json
 
-PROMPT_VERSION = "v2"
+PROMPT_VERSION = "v3"  # v3: neues Feld bestellnummer (Rechnung), vertragsnummer kann fehlen
 
 # Formatbeispiele aus Prompt v1. Das Labeling kennzeichnet sie, wenn ein
 # Modell sie unverändert ausgibt (relevant für Läufe mit Prompt v1).
@@ -48,11 +48,12 @@ SCHEMA_HINWEISE = {
         "ust_betrag": "Zahl",
         "brutto": "Zahl",
         "zahlungsziel_tage": "Zahl (Tage)",
+        "bestellnummer": "string oder null",
         "iban": "string oder null",
         "bic": "string oder null",
     },
     "vertrag": {
-        "vertragsnummer": "string",
+        "vertragsnummer": "string oder null",
         "vertragsdatum": "JJJJ-MM-TT (Datum der Unterzeichnung)",
         "auftraggeber": _ANSCHRIFT,
         "auftragnehmer": _ANSCHRIFT,

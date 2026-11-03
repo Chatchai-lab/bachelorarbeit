@@ -52,14 +52,15 @@ class Rechnung(_Base):
     ust_betrag: float
     brutto: float
     zahlungsziel_tage: int
-    # optional: fehlt bei einem festen Anteil der Dokumente
+    # optional: fehlen jeweils bei einem festen Anteil der Dokumente
+    bestellnummer: Optional[str] = None
     iban: Optional[str] = None
     bic: Optional[str] = None
 
 
 class Vertrag(_Base):
     dokument_typ: Literal["vertrag"] = "vertrag"
-    vertragsnummer: str
+    vertragsnummer: Optional[str]  # optional, steht aber vorne wie im Dokument
     vertragsdatum: date
     auftraggeber: Anschrift
     auftragnehmer: Anschrift
@@ -76,8 +77,10 @@ class Vertrag(_Base):
 
 GroundTruth = Rechnung | Vertrag
 
-# Optionale Felder je Dokumenttyp, die bei einem festen Anteil fehlen
-OPTIONAL_FIELDS = {
-    "rechnung": ["iban", "bic"],
-    "vertrag": ["verlaengerung"],
+# Optionale Feldgruppen je Dokumenttyp. Jede Gruppe fehlt unabhängig von den
+# anderen bei einem festen Anteil der Dokumente. Fehlende Werte sind die
+# Gelegenheit für erfundene Werte (extrinsische Halluzinationen).
+OPTIONAL_GROUPS = {
+    "rechnung": {"bank": ["iban", "bic"], "bestellnummer": ["bestellnummer"]},
+    "vertrag": {"verlaengerung": ["verlaengerung"], "vertragsnummer": ["vertragsnummer"]},
 }
