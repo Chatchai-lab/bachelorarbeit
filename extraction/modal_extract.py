@@ -59,18 +59,21 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
     from extraction.parsing import parse_model_output
     from extraction.prompts import build_messages, json_schema
 
-    oc.start_server()
-    if oc.ensure_model(model):
-        models_volume.commit()
-
     from common.hardware import check_gpu
 
+    oc.start_server()
+
+    # GPU zuerst prüfen: bei falscher Karte sofort abbrechen, bevor Zeit und Guthaben verbraucht werden
     env = oc.environment_info()
     run_dir = Path("/results") / run_id
     previous_gpu = None
     if (run_dir / "run.json").exists():  # Wiederaufnahme: gleiche GPU erzwingen
         previous_gpu = json.loads((run_dir / "run.json").read_text())["environment"].get("gpu")
+    print(f"GPU erkannt: {env.get('gpu')}", flush=True)
     check_gpu(env.get("gpu"), previous_gpu)
+
+    if oc.ensure_model(model):
+        models_volume.commit()
 
     protocol = {
         **protocol,
