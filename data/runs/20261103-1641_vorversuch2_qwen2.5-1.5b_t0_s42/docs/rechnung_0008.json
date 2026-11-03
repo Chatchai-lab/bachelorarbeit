@@ -1,0 +1,52 @@
+{
+  "doc_id": "rechnung_0008",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1641_vorversuch2_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2507-023\",\n  \"rechnungsdatum\": \"2025-07-08\",\n  \"leistungsdatum\": \"2025-06-20\",\n  \"lieferant\": {\n    \"name\": \"Heuser AG & Co. KGaA\",\n    \"strasse\": \"Wilma-Heß-Allee 4\",\n    \"plz\": \"15627\",\n    \"ort\": \"Kelheim\"\n  },\n  \"lieferant_ust_id\": \"DE415024204\",\n  \"kunde\": {\n    \"name\": \"Gorlitz KG\",\n    \"strasse\": \"Roman-Zobel-Gasse 5/6\",\n    \"plz\": \"07041\",\n    \"ort\": \"Backnang\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Einrichtung Arbeitsplatzrechner\",\n      \"menge\": \"1 Stück\",\n      \"einheit\": \"Stück\",\n      \"einzelpreis\": \"93.02\",\n      \"gesamtpreis\": \"93.02\"\n    }\n  ],\n  \"netto\": \"93.02\",\n  \"ust_satz\": \"19\",\n  \"ust_betrag\": \"17.67\",\n  \"brutto\": \"110.69\",\n  \"zahlungsziel_tage\": \"7\",\n  \"iban\": \"DE51 5007 0010 1398 0847 05\",\n  \"bic\": \"DEUTDEFFXXX\"\n}",
+  "parsed": {
+    "rechnungsnummer": "2507-023",
+    "rechnungsdatum": "2025-07-08",
+    "leistungsdatum": "2025-06-20",
+    "lieferant": {
+      "name": "Heuser AG & Co. KGaA",
+      "strasse": "Wilma-Heß-Allee 4",
+      "plz": "15627",
+      "ort": "Kelheim"
+    },
+    "lieferant_ust_id": "DE415024204",
+    "kunde": {
+      "name": "Gorlitz KG",
+      "strasse": "Roman-Zobel-Gasse 5/6",
+      "plz": "07041",
+      "ort": "Backnang"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Einrichtung Arbeitsplatzrechner",
+        "menge": "1 Stück",
+        "einheit": "Stück",
+        "einzelpreis": "93.02",
+        "gesamtpreis": "93.02"
+      }
+    ],
+    "netto": "93.02",
+    "ust_satz": "19",
+    "ust_betrag": "17.67",
+    "brutto": "110.69",
+    "zahlungsziel_tage": "7",
+    "iban": "DE51 5007 0010 1398 0847 05",
+    "bic": "DEUTDEFFXXX"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1521.0,
+  "total_ms": 1519.8,
+  "load_ms": 2.8,
+  "prompt_eval_ms": 30.6,
+  "eval_ms": 1463.4,
+  "prompt_tokens": 868,
+  "completion_tokens": 371,
+  "created_at": "2026-11-03T15:43:51+00:00"
+}

@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0008",
+  "doc_type": "vertrag",
+  "run_id": "20261103-1641_vorversuch2_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2025-8168\",\n  \"vertragsdatum\": \"2025-04-01\",\n  \"auftraggeber\": {\n    \"name\": \"Nerger Norma-Dippel-Ring 9817, 51367 Perleberg\",\n    \"strasse\": \"\",\n    \"plz\": \"51367\",\n    \"ort\": \"Perleberg\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Weller AG & Co. KGaA\",\n    \"strasse\": \"Freia-Schuchhardt-Weg 33-83, 66498 Staßfurt\",\n    \"plz\": \"66498\",\n    \"ort\": \"Staßfurt\"\n  },\n  \"leistungsgegenstand\": \"Leistungen im Bereich Winterdienst\",\n  \"vertragsbeginn\": \"2025-04-01\",\n  \"laufzeit_monate\": \"12\",\n  \"vertragsende\": \"2026-03-31\",\n  \"kuendigungsfrist\": \"3 Monate zum Quartalsende\",\n  \"verguetung_netto\": \"1.699,22 €\",\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"automatisch um weitere 12 Monate\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2025-8168",
+    "vertragsdatum": "2025-04-01",
+    "auftraggeber": {
+      "name": "Nerger Norma-Dippel-Ring 9817, 51367 Perleberg",
+      "strasse": "",
+      "plz": "51367",
+      "ort": "Perleberg"
+    },
+    "auftragnehmer": {
+      "name": "Weller AG & Co. KGaA",
+      "strasse": "Freia-Schuchhardt-Weg 33-83, 66498 Staßfurt",
+      "plz": "66498",
+      "ort": "Staßfurt"
+    },
+    "leistungsgegenstand": "Leistungen im Bereich Winterdienst",
+    "vertragsbeginn": "2025-04-01",
+    "laufzeit_monate": "12",
+    "vertragsende": "2026-03-31",
+    "kuendigungsfrist": "3 Monate zum Quartalsende",
+    "verguetung_netto": "1.699,22 €",
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "automatisch um weitere 12 Monate"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1403.4,
+  "total_ms": 1402.2,
+  "load_ms": 2.0,
+  "prompt_eval_ms": 59.9,
+  "eval_ms": 1304.4,
+  "prompt_tokens": 1283,
+  "completion_tokens": 329,
+  "created_at": "2026-11-03T15:44:18+00:00"
+}

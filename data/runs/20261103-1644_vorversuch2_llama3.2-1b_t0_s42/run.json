@@ -1,0 +1,47 @@
+{
+  "run_id": "20261103-1644_vorversuch2_llama3.2-1b_t0_s42",
+  "dataset": {
+    "name": "vorversuch2",
+    "seed": 42,
+    "path": "data/datasets/vorversuch2"
+  },
+  "n_docs_requested": 20,
+  "options": {
+    "temperature": 0.0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "output_format": "schema_text",
+  "prompt_version": "v2",
+  "prompt_hash": "cd6d3cf6a64d",
+  "gpu_requested": "A10",
+  "git_commit": "843acc941bf54d671be7549bd60945da51ef0c47",
+  "model": {
+    "name": "llama3.2:1b",
+    "digest": "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+    "size_bytes": 1321098329,
+    "family": "llama",
+    "parameter_size": "1.2B",
+    "quantization": "Q8_0",
+    "format": "gguf"
+  },
+  "environment": {
+    "ollama_version": "0.40.14",
+    "gpu": "NVIDIA A10",
+    "gpu_driver": "610.57.04",
+    "gpu_memory": "23028 MiB",
+    "cpu_count": 17,
+    "modal_region": "us-east",
+    "modal_cloud": "CLOUD_PROVIDER_OCI"
+  },
+  "started_at": "2026-11-03T15:44:36+00:00",
+  "finished_at": "2026-11-03T15:46:05+00:00",
+  "summary": {
+    "n_docs": 20,
+    "n_unbrauchbar": 0,
+    "anteil_unbrauchbar": 0.0,
+    "latenz_median_ms": 1263.0,
+    "latenz_max_ms": 2346.4
+  }
+}

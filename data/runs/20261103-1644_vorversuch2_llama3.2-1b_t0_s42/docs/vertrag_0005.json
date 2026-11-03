@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0005",
+  "doc_type": "vertrag",
+  "run_id": "20261103-1644_vorversuch2_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2025-4049\",\n  \"vertragsdatum\": \"07.04.2025\",\n  \"auftraggeber\": {\n    \"name\": \"Schomber GmbH\",\n    \"strasse\": \"Hanna-Freudenberger-Weg 1/2\",\n    \"plz\": \"63103\",\n    \"ort\": \"Meiningen\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Rose Hendriks GmbH & Co. OHG\",\n    \"strasse\": \"Jens-Uwe-Otto-Weg 209\",\n    \"plz\": \"79698\",\n    \"ort\": \"Neunburg vorm Wald\"\n  },\n  \"leistungsgegenstand\": \"Gebäudereinigung\",\n  \"vertragsbeginn\": \"07.04.2025\",\n  \"laufzeit_monate\": \"24\",\n  \"vertragsende\": \"31.05.2027\",\n  \"kuendigungsfrist\": \"monatlich\",\n  \"verguetung_netto\": \"3.100,50\",\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"null\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2025-4049",
+    "vertragsdatum": "07.04.2025",
+    "auftraggeber": {
+      "name": "Schomber GmbH",
+      "strasse": "Hanna-Freudenberger-Weg 1/2",
+      "plz": "63103",
+      "ort": "Meiningen"
+    },
+    "auftragnehmer": {
+      "name": "Rose Hendriks GmbH & Co. OHG",
+      "strasse": "Jens-Uwe-Otto-Weg 209",
+      "plz": "79698",
+      "ort": "Neunburg vorm Wald"
+    },
+    "leistungsgegenstand": "Gebäudereinigung",
+    "vertragsbeginn": "07.04.2025",
+    "laufzeit_monate": "24",
+    "vertragsende": "31.05.2027",
+    "kuendigungsfrist": "monatlich",
+    "verguetung_netto": "3.100,50",
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "null"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1117.6,
+  "total_ms": 1116.5,
+  "load_ms": 1.9,
+  "prompt_eval_ms": 37.3,
+  "eval_ms": 1048.9,
+  "prompt_tokens": 1284,
+  "completion_tokens": 270,
+  "created_at": "2026-11-03T15:45:54+00:00"
+}

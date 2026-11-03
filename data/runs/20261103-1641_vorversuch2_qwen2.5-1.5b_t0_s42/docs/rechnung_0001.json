@@ -1,0 +1,52 @@
+{
+  "doc_id": "rechnung_0001",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1641_vorversuch2_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2505-916\",\n  \"rechnungsdatum\": \"2025-05-25\",\n  \"leistungsdatum\": \"2025-05-19\",\n  \"lieferant\": {\n    \"name\": \"Ullmann e.V.\",\n    \"strasse\": \"Harold-Ditschlerin-Weg 428\",\n    \"plz\": \"17853 Griesbach Rottal\",\n    \"ort\": \"Griesbach Rottal\"\n  },\n  \"lieferant_ust_id\": \"DE178530478\",\n  \"kunde\": {\n    \"name\": \"Ullmann e.V.\",\n    \"strasse\": \"Harold-Ditschlerin-Weg 428\",\n    \"plz\": \"17853 Griesbach Rottal\",\n    \"ort\": \"Griesbach Rottal\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Whiteboard\",\n      \"menge\": \"120 x 90 cm\",\n      \"einheit\": \" Stück\",\n      \"einzelpreis\": \"124,84 €\",\n      \"gesamtpreis\": \"124,84 €\"\n    }\n  ],\n  \"netto\": \"124,84 €\",\n  \"ust_satz\": \"19%\",\n  \"ust_betrag\": \"23,72 €\",\n  \"brutto\": \"148,56 €\",\n  \"zahlungsziel_tage\": \"30\",\n  \"iban\": \"DE37 3704 0044 2192 2966 85\",\n  \"bic\": \"COBADEFFXXX\"\n}",
+  "parsed": {
+    "rechnungsnummer": "2505-916",
+    "rechnungsdatum": "2025-05-25",
+    "leistungsdatum": "2025-05-19",
+    "lieferant": {
+      "name": "Ullmann e.V.",
+      "strasse": "Harold-Ditschlerin-Weg 428",
+      "plz": "17853 Griesbach Rottal",
+      "ort": "Griesbach Rottal"
+    },
+    "lieferant_ust_id": "DE178530478",
+    "kunde": {
+      "name": "Ullmann e.V.",
+      "strasse": "Harold-Ditschlerin-Weg 428",
+      "plz": "17853 Griesbach Rottal",
+      "ort": "Griesbach Rottal"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Whiteboard",
+        "menge": "120 x 90 cm",
+        "einheit": " Stück",
+        "einzelpreis": "124,84 €",
+        "gesamtpreis": "124,84 €"
+      }
+    ],
+    "netto": "124,84 €",
+    "ust_satz": "19%",
+    "ust_betrag": "23,72 €",
+    "brutto": "148,56 €",
+    "zahlungsziel_tage": "30",
+    "iban": "DE37 3704 0044 2192 2966 85",
+    "bic": "COBADEFFXXX"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 9332.7,
+  "total_ms": 9331.5,
+  "load_ms": 2.9,
+  "prompt_eval_ms": 60.3,
+  "eval_ms": 9260.4,
+  "prompt_tokens": 890,
+  "completion_tokens": 403,
+  "created_at": "2026-11-03T15:43:32+00:00"
+}
