@@ -33,6 +33,7 @@ from .common import derive_seed, make_rng
 from .contract import make_contract
 from .invoice import make_invoice
 from .render import LAYOUTS, html_to_pdf, pdf_to_text, render_html
+from .validate import missing_values
 
 MAKERS = {"rechnung": make_invoice, "vertrag": make_contract}
 
@@ -57,7 +58,7 @@ def missing_indices(seed: int, doc_type: str, n: int, rate: float) -> set[int]:
     """Fester Anteil: genau round(n * rate) Dokumente ohne optionale Felder."""
     import random
 
-    k = round(n * rate)
+    k = int(n * rate + 0.5)  # kaufmännisch runden (round() rundet 2,5 auf 2)
     return set(random.Random(derive_seed(seed, doc_type, "missing")).sample(range(1, n + 1), k))
 
 
@@ -83,7 +84,11 @@ def generate(name: str, counts: dict[str, int], seed: int, missing_rate: float, 
             (d / "document.html").write_text(html, encoding="utf-8")
             if pdf:
                 html_to_pdf(html, d / "document.pdf")
-                (d / "document.txt").write_text(pdf_to_text(d / "document.pdf"), encoding="utf-8")
+                text = pdf_to_text(d / "document.pdf")
+                (d / "document.txt").write_text(text, encoding="utf-8")
+                fehlt = missing_values(gt, text)
+                if fehlt:
+                    raise SystemExit(f"{doc_id}: Werte im Text nicht auffindbar: {fehlt}")
 
             docs.append({
                 "doc_id": doc_id,

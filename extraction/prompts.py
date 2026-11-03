@@ -4,9 +4,11 @@ Jede inhaltliche Änderung an den Prompts erhöht PROMPT_VERSION, damit jeder
 Lauf eindeutig einem Prompt zugeordnet werden kann. Zusätzlich wird ein Hash
 der Prompt-Texte protokolliert.
 
-Die Beispiele in den Formathinweisen sind bewusst Werte, die im Datensatz
-nicht vorkommen (z. B. "2 Wochen zum Monatsende"). Übernimmt ein Modell ein
-solches Beispiel, ist das als Halluzination erkennbar.
+v1 enthielt bei Kündigungsfrist und Verlängerung konkrete Beispielwerte.
+Der Vorversuch zeigte, dass die Modelle diese Beispiele häufig wörtlich
+übernehmen (Qwen2.5: Verlängerung in 10 von 10 Verträgen). Das ist ein
+Artefakt des Prompts und keine natürliche Halluzination. Ab v2 beschreiben
+die Formathinweise deshalb nur noch die Form, ohne konkrete Werte.
 """
 
 from __future__ import annotations
@@ -14,7 +16,14 @@ from __future__ import annotations
 import hashlib
 import json
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
+
+# Formatbeispiele aus Prompt v1. Das Labeling kennzeichnet sie, wenn ein
+# Modell sie unverändert ausgibt (relevant für Läufe mit Prompt v1).
+PROMPT_BEISPIELE = {
+    "kuendigungsfrist": "2 Wochen zum Monatsende",
+    "verlaengerung": "automatisch um 3 Monate",
+}
 
 SYSTEM = (
     "Du bist ein System zur Datenextraktion aus deutschen Geschäftsdokumenten. "
@@ -51,10 +60,10 @@ SCHEMA_HINWEISE = {
         "vertragsbeginn": "JJJJ-MM-TT",
         "laufzeit_monate": "Zahl (Monate)",
         "vertragsende": "JJJJ-MM-TT",
-        "kuendigungsfrist": "string, Dauer und Zeitpunkt, z. B. '2 Wochen zum Monatsende'",
+        "kuendigungsfrist": "string, Dauer und Bezugszeitpunkt der Kündigung wie im Dokument angegeben",
         "verguetung_netto": "Zahl (Nettobetrag je Abrechnungszeitraum)",
         "verguetung_intervall": "'monatlich', 'vierteljährlich' oder 'jährlich'",
-        "verlaengerung": "string oder null, z. B. 'automatisch um 3 Monate'",
+        "verlaengerung": "string oder null, Dauer der automatischen Verlängerung wie im Dokument angegeben",
     },
 }
 

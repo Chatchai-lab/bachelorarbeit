@@ -1,0 +1,275 @@
+{
+  "gesamt": {
+    "felder": 240,
+    "halluziniert": 56,
+    "manuell_pruefen": 8,
+    "rate": 0.233
+  },
+  "je_dokumenttyp": {
+    "rechnung": {
+      "felder": 96,
+      "halluziniert": 24,
+      "manuell_pruefen": 0,
+      "rate": 0.25
+    },
+    "vertrag": {
+      "felder": 144,
+      "halluziniert": 32,
+      "manuell_pruefen": 8,
+      "rate": 0.222
+    }
+  },
+  "je_fehlertyp": {
+    "vertauscht": 26,
+    "erfunden": 22,
+    "verfaelscht": 4,
+    "rechen_logik": 3,
+    "format_schema": 1
+  },
+  "je_feld": {
+    "rechnung:bic": {
+      "felder": 4,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.25
+    },
+    "rechnung:brutto": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:iban": {
+      "felder": 4,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.25
+    },
+    "rechnung:kunde.name": {
+      "felder": 4,
+      "halluziniert": 3,
+      "manuell_pruefen": 0,
+      "rate": 0.75
+    },
+    "rechnung:kunde.ort": {
+      "felder": 4,
+      "halluziniert": 4,
+      "manuell_pruefen": 0,
+      "rate": 1.0
+    },
+    "rechnung:kunde.plz": {
+      "felder": 4,
+      "halluziniert": 4,
+      "manuell_pruefen": 0,
+      "rate": 1.0
+    },
+    "rechnung:kunde.strasse": {
+      "felder": 4,
+      "halluziniert": 4,
+      "manuell_pruefen": 0,
+      "rate": 1.0
+    },
+    "rechnung:leistungsdatum": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:lieferant.name": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:lieferant.ort": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:lieferant.plz": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:lieferant.strasse": {
+      "felder": 4,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.25
+    },
+    "rechnung:lieferant_ust_id": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:netto": {
+      "felder": 4,
+      "halluziniert": 2,
+      "manuell_pruefen": 0,
+      "rate": 0.5
+    },
+    "rechnung:positionen.*": {
+      "felder": 20,
+      "halluziniert": 4,
+      "manuell_pruefen": 0,
+      "rate": 0.2
+    },
+    "rechnung:rechnungsdatum": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:rechnungsnummer": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:ust_betrag": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:ust_satz": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:zahlungsziel_tage": {
+      "felder": 4,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftraggeber.name": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftraggeber.ort": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftraggeber.plz": {
+      "felder": 8,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.125
+    },
+    "vertrag:auftraggeber.strasse": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftragnehmer.name": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftragnehmer.ort": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftragnehmer.plz": {
+      "felder": 8,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.125
+    },
+    "vertrag:auftragnehmer.strasse": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:kuendigungsfrist": {
+      "felder": 8,
+      "halluziniert": 8,
+      "manuell_pruefen": 0,
+      "rate": 1.0
+    },
+    "vertrag:laufzeit_monate": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:leistungsgegenstand": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 8,
+      "rate": 0.0
+    },
+    "vertrag:verguetung_intervall": {
+      "felder": 8,
+      "halluziniert": 4,
+      "manuell_pruefen": 0,
+      "rate": 0.5
+    },
+    "vertrag:verguetung_netto": {
+      "felder": 8,
+      "halluziniert": 2,
+      "manuell_pruefen": 0,
+      "rate": 0.25
+    },
+    "vertrag:verlaengerung": {
+      "felder": 8,
+      "halluziniert": 8,
+      "manuell_pruefen": 0,
+      "rate": 1.0
+    },
+    "vertrag:vertragsbeginn": {
+      "felder": 8,
+      "halluziniert": 4,
+      "manuell_pruefen": 0,
+      "rate": 0.5
+    },
+    "vertrag:vertragsdatum": {
+      "felder": 8,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.125
+    },
+    "vertrag:vertragsende": {
+      "felder": 8,
+      "halluziniert": 3,
+      "manuell_pruefen": 0,
+      "rate": 0.375
+    },
+    "vertrag:vertragsnummer": {
+      "felder": 8,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    }
+  },
+  "run_id": "20261103-1517_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "output_format": "none",
+  "gpu": "NVIDIA A10G",
+  "n_docs": 20,
+  "n_unbrauchbar": 8,
+  "unbrauchbar": [
+    "rechnung_0002",
+    "rechnung_0003",
+    "rechnung_0004",
+    "rechnung_0007",
+    "rechnung_0009",
+    "rechnung_0010",
+    "vertrag_0006",
+    "vertrag_0009"
+  ]
+}

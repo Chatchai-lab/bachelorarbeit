@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <style>
 {{ css }}
-.kopf { display: flex; justify-content: space-between; margin-bottom: 12mm; }
+/* Briefkopf über der Anschrift, nicht daneben: sonst vermischt die
+   Textextraktion die Zeilen beider Blöcke */
+.briefkopf { text-align: right; margin-bottom: 6mm; }
+.briefkopf strong { font-size: 12pt; }
+.anschrift { width: 85mm; margin-bottom: 10mm; }
 .absender { font-size: 7.5pt; color: #444; border-bottom: 0.5pt solid #888; margin-bottom: 2mm; }
-.firma { text-align: right; }
-.firma strong { font-size: 12pt; }
 .infos td { padding: 0.5mm 0 0.5mm 4mm; }
 .pos th { border-bottom: 1pt solid #111; text-align: left; padding: 1.5mm 1mm; }
 .pos td { border-bottom: 0.4pt solid #ccc; padding: 1.5mm 1mm; vertical-align: top; }
@@ -19,19 +21,17 @@
 </style>
 </head>
 <body>
-<div class="kopf">
-  <div>
-    <div class="absender">{{ gt.lieferant.name }} · {{ gt.lieferant.strasse }} · {{ gt.lieferant.plz }} {{ gt.lieferant.ort }}</div>
-    {{ gt.kunde.name }}<br>
-    {{ gt.kunde.strasse }}<br>
-    {{ gt.kunde.plz }} {{ gt.kunde.ort }}
-  </div>
-  <div class="firma">
-    <strong>{{ gt.lieferant.name }}</strong><br>
-    {{ gt.lieferant.strasse }}<br>
-    {{ gt.lieferant.plz }} {{ gt.lieferant.ort }}<br>
-    Tel. {{ r.telefon }}
-  </div>
+<div class="briefkopf">
+  <strong>{{ gt.lieferant.name }}</strong><br>
+  {{ gt.lieferant.strasse }}<br>
+  {{ gt.lieferant.plz }} {{ gt.lieferant.ort }}<br>
+  Tel. {{ r.telefon }}
+</div>
+<div class="anschrift">
+  <div class="absender">{{ gt.lieferant.name }} · {{ gt.lieferant.strasse }} · {{ gt.lieferant.plz }} {{ gt.lieferant.ort }}</div>
+  {{ gt.kunde.name }}<br>
+  {{ gt.kunde.strasse }}<br>
+  {{ gt.kunde.plz }} {{ gt.kunde.ort }}
 </div>
 
 <h1>Rechnung</h1>

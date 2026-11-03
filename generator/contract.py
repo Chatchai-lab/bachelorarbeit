@@ -161,8 +161,8 @@ def make_contract(rng: random.Random, fake: Faker, mit_verlaengerung: bool) -> t
 
     paragraphen: list[tuple[str, list[str]]] = []
     paragraphen.append(("Vertragsgegenstand", [
-        f"Gegenstand dieses Vertrags ist {leistung['text']} durch den Auftragnehmer "
-        f"(nachfolgend „Leistungen“).",
+        f"Gegenstand dieses Vertrags sind Leistungen des Auftragnehmers im Bereich "
+        f"„{leistung['name']}“ (nachfolgend „Leistungen“). Diese umfassen {leistung['text']}.",
         "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit "
         "qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern "
         "der Auftraggeber zuvor in Textform zugestimmt hat.",
@@ -171,7 +171,7 @@ def make_contract(rng: random.Random, fake: Faker, mit_verlaengerung: bool) -> t
     paragraphen.append(("Vertragsbeginn und Laufzeit", [
         rng.choice([
             f"Der Vertrag beginnt am {fdate(beginn)} und wird für eine Laufzeit von "
-            f"{laufzeit_txt} Monaten fest abgeschlossen.",
+            f"{laufzeit_txt} Monaten fest abgeschlossen; er endet am {fdate(ende)}.",
             f"Das Vertragsverhältnis beginnt am {fdate(beginn)}. Die feste Vertragslaufzeit "
             f"beträgt {laufzeit_txt} Monate und endet am {fdate(ende)}.",
         ]),

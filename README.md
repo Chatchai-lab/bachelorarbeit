@@ -12,7 +12,7 @@ Chatchai Sirichot, Hochschule Darmstadt (h_da), Fachbereich Informatik
 | `common/`      | Datenmodelle (Ground Truth), IBAN, Formatierung      | –         | fertig   |
 | `generator/`   | Faker (de_DE) → JSON → Jinja2 → PDF → Text           | lokal     | fertig   |
 | `extraction/`  | Extraktion mit Llama 3.2 1B / Qwen2.5 1.5B (Ollama)  | Modal     | fertig   |
-| `labeling/`    | Abgleich Extraktion ↔ Ground Truth, Fehlertypen      | lokal     | offen    |
+| `labeling/`    | Abgleich Extraktion ↔ Ground Truth, Fehlertypen      | lokal     | fertig   |
 | `checks/`      | Prüfstufen: Regeln, NLI, LLM-as-a-Judge              | Modal     | offen    |
 | `experiments/` | Modal-Skripte für Einzel- und Kombinationsläufe      | Modal     | offen    |
 | `analysis/`    | Precision/Recall/F1, Bootstrap, Plots                | lokal     | offen    |
@@ -66,7 +66,15 @@ pytest             # alle Tests sollten durchlaufen
    Ergebnisse liegen unter `data/runs/<run-id>/` (`run.json` = Protokoll,
    `extractions.jsonl` = alle Antworten).
 
-4. **Ergebnisse committen**: `git add data && git commit && git push`.
+4. **Labeln** (lokal, vergleicht feldweise mit der Ground Truth):
+
+   ```bash
+   python -m labeling.label data/runs/<run-id> [weitere Läufe ...]
+   ```
+
+   Schreibt `labels.jsonl` (ein Eintrag je Feld) und `labels_summary.json` in den Lauf-Ordner.
+
+5. **Ergebnisse committen**: `git add data && git commit && git push`.
 
 ### Optionen der Extraktion
 

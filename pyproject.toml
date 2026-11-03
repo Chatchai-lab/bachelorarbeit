@@ -21,7 +21,7 @@ modal = ["modal>=1.0"]
 dev = ["pytest>=8"]
 
 [tool.setuptools.packages.find]
-include = ["common*", "generator*", "extraction*"]
+include = ["common*", "generator*", "extraction*", "labeling*"]
 
 [tool.setuptools.package-data]
 generator = ["templates/*.j2", "templates/*.css"]
