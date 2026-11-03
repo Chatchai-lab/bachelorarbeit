@@ -1,0 +1,35 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2607-958",
+  "rechnungsdatum": "2026-07-23",
+  "leistungsdatum": "2026-07-11",
+  "lieferant": {
+    "name": "Wulff",
+    "strasse": "Bozena-Kohl-Gasse 4/3",
+    "plz": "77617",
+    "ort": "Büsingen am Hochrhein"
+  },
+  "lieferant_ust_id": "DE177162604",
+  "kunde": {
+    "name": "Seidel Ernst e.G.",
+    "strasse": "Bohlanderring 92/40",
+    "plz": "00077",
+    "ort": "Wolfratshausen"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Wartung Serverinfrastruktur",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 690.58,
+      "gesamtpreis": 690.58
+    }
+  ],
+  "netto": 690.58,
+  "ust_satz": 19,
+  "ust_betrag": 131.21,
+  "brutto": 821.79,
+  "zahlungsziel_tage": 14,
+  "iban": "DE87100100106449452647",
+  "bic": "PBNKDEFFXXX"
+}

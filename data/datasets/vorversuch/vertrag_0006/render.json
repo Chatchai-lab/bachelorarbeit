@@ -1,0 +1,50 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags ist die regelmäßige Unterhaltsreinigung der Büroräume des Auftraggebers einschließlich Sanitärbereichen, Teeküchen und Treppenhäusern gemäß dem in Anlage 1 beschriebenen Reinigungsplan durch den Auftragnehmer (nachfolgend „Leistungen“).",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Das Vertragsverhältnis beginnt am 1. April 2026. Die feste Vertragslaufzeit beträgt sechsunddreißig Monate und endet am 31. März 2029."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine jährliche Pauschale in Höhe von 14.443,42 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Die Vergütung ist jeweils im Voraus bis zum dritten Werktag des Abrechnungszeitraums fällig.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Der Vertrag kann von jeder Partei mit einer Frist von drei Monaten zum Monatsende schriftlich gekündigt werden.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Berchtesgaden."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "6. Februar 2026",
+  "unterzeichner_ag": "Ingbert Bolzmann B.A.",
+  "unterzeichner_an": "Blanka Steinberg-Bonbach",
+  "layout": "vertrag_a.html.j2"
+}

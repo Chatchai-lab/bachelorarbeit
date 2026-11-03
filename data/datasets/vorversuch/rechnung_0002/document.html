@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 20mm 20mm 22mm 22mm; }
+body { font-family: &#34;DejaVu Sans&#34;, &#34;Liberation Sans&#34;, Arial, sans-serif; font-size: 9.5pt; color: #111; line-height: 1.4; }
+h1 { font-size: 15pt; margin: 0 0 4mm 0; }
+h2 { font-size: 10.5pt; margin: 5mm 0 1.5mm 0; }
+p { margin: 0 0 2mm 0; }
+.small { font-size: 7.5pt; color: #444; }
+.right { text-align: right; }
+table { border-collapse: collapse; width: 100%; }
+
+.kopf { display: flex; justify-content: space-between; margin-bottom: 12mm; }
+.absender { font-size: 7.5pt; color: #444; border-bottom: 0.5pt solid #888; margin-bottom: 2mm; }
+.firma { text-align: right; }
+.firma strong { font-size: 12pt; }
+.infos td { padding: 0.5mm 0 0.5mm 4mm; }
+.pos th { border-bottom: 1pt solid #111; text-align: left; padding: 1.5mm 1mm; }
+.pos td { border-bottom: 0.4pt solid #ccc; padding: 1.5mm 1mm; vertical-align: top; }
+.pos .num { text-align: right; white-space: nowrap; }
+.summen { width: 75mm; margin-left: auto; margin-top: 4mm; }
+.summen td { padding: 1mm; }
+.summen tr.brutto td { border-top: 1pt solid #111; font-weight: bold; }
+.fuss { margin-top: 14mm; border-top: 0.5pt solid #888; padding-top: 2mm; display: flex; gap: 10mm; }
+</style>
+</head>
+<body>
+<div class="kopf">
+  <div>
+    <div class="absender">Tschentscher Gutknecht AG · Faustallee 667 · 67879 Hainichen</div>
+    Steuer GmbH &amp; Co. KG<br>
+    Imke-Preiß-Weg 5-1<br>
+    22299 Hofgeismar
+  </div>
+  <div class="firma">
+    <strong>Tschentscher Gutknecht AG</strong><br>
+    Faustallee 667<br>
+    67879 Hainichen<br>
+    Tel. 04229 69978
+  </div>
+</div>
+
+<h1>Rechnung</h1>
+<table class="infos" style="width:auto; margin-bottom: 6mm;">
+  <tr><td style="padding-left:0">Rechnungsnummer:</td><td>2507-851</td></tr>
+  <tr><td style="padding-left:0">Rechnungsdatum:</td><td>27.07.2025</td></tr>
+  <tr><td style="padding-left:0">Leistungsdatum:</td><td>27.07.2025</td></tr>
+  <tr><td style="padding-left:0">Kundennummer:</td><td>KD-48118</td></tr>
+  <tr><td style="padding-left:0">Ansprechpartner:</td><td>Antonios Hendriks</td></tr>
+</table>
+
+<p>Sehr geehrte Damen und Herren,<br>für unsere Leistungen erlauben wir uns, Ihnen Folgendes in Rechnung zu stellen:</p>
+
+<table class="pos">
+  <tr><th>Pos.</th><th>Beschreibung</th><th class="num">Menge</th><th>Einheit</th><th class="num">Einzelpreis</th><th class="num">Gesamt</th></tr>
+  
+  <tr>
+    <td>1</td>
+    <td>Kaffee- und Getränkepauschale, je Person</td>
+    <td class="num">40</td>
+    <td>Person</td>
+    <td class="num">7,67 €</td>
+    <td class="num">306,80 €</td>
+  </tr>
+  
+  <tr>
+    <td>2</td>
+    <td>Mittagsbuffet, je Person</td>
+    <td class="num">25</td>
+    <td>Person</td>
+    <td class="num">20,61 €</td>
+    <td class="num">515,25 €</td>
+  </tr>
+  
+  <tr>
+    <td>3</td>
+    <td>Geschirr- und Besteckmiete</td>
+    <td class="num">1</td>
+    <td>Pauschale</td>
+    <td class="num">137,96 €</td>
+    <td class="num">137,96 €</td>
+  </tr>
+  
+</table>
+
+<table class="summen">
+  <tr><td>Nettobetrag</td><td class="right">960,01 €</td></tr>
+  <tr><td>zzgl. 19 % USt.</td><td class="right">182,40 €</td></tr>
+  <tr class="brutto"><td>Rechnungsbetrag</td><td class="right">1.142,41 €</td></tr>
+</table>
+
+<p style="margin-top:6mm">
+Der Rechnungsbetrag ist innerhalb von 30 Tagen ohne Abzug zahlbar.
+
+Bitte geben Sie bei Zahlung die Rechnungsnummer an.</p>
+<p>Mit freundlichen Grüßen<br>Tschentscher Gutknecht AG</p>
+
+<div class="fuss small">
+  <div>Tschentscher Gutknecht AG<br>Faustallee 667<br>67879 Hainichen</div>
+  <div>USt-IdNr.: DE944271889</div>
+  
+</div>
+</body>
+</html>

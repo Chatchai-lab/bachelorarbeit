@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0008",
+  "doc_type": "vertrag",
+  "run_id": "20261103-1524_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2025-8168\",\n  \"vertragsdatum\": \"2025-03-07\",\n  \"auftraggeber\": {\n    \"name\": \"Nerger\",\n    \"strasse\": \"Norma-Dippel-Ring 9817\",\n    \"plz\": \"51367\",\n    \"ort\": \"Perleberg\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Weller AG & Co. KGaA\",\n    \"strasse\": \"Freia-Schuchhardt-Weg 33-83\",\n    \"plz\": \"66498\",\n    \"ort\": \"Staßfurt\"\n  },\n  \"leistungsgegenstand\": \"Räumung und Streuung der Gehwege, Zufahrten und Parkflächen auf dem Betriebsgelände des Auftraggebers\",\n  \"vertragsbeginn\": \"2025-04-01\",\n  \"laufzeit_monate\": 12,\n  \"vertragsende\": \"2025-03-31\",\n  \"kuendigungsfrist\": \"2 Wochen zum Quartalsende\",\n  \"verguetung_netto\": 1699.22,\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"automatisch um 3 Monate\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2025-8168",
+    "vertragsdatum": "2025-03-07",
+    "auftraggeber": {
+      "name": "Nerger",
+      "strasse": "Norma-Dippel-Ring 9817",
+      "plz": "51367",
+      "ort": "Perleberg"
+    },
+    "auftragnehmer": {
+      "name": "Weller AG & Co. KGaA",
+      "strasse": "Freia-Schuchhardt-Weg 33-83",
+      "plz": "66498",
+      "ort": "Staßfurt"
+    },
+    "leistungsgegenstand": "Räumung und Streuung der Gehwege, Zufahrten und Parkflächen auf dem Betriebsgelände des Auftraggebers",
+    "vertragsbeginn": "2025-04-01",
+    "laufzeit_monate": 12,
+    "vertragsende": "2025-03-31",
+    "kuendigungsfrist": "2 Wochen zum Quartalsende",
+    "verguetung_netto": 1699.22,
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "automatisch um 3 Monate"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1279.4,
+  "total_ms": 1278.2,
+  "load_ms": 2.0,
+  "prompt_eval_ms": 32.5,
+  "eval_ms": 1208.5,
+  "prompt_tokens": 1238,
+  "completion_tokens": 300,
+  "created_at": "2026-11-03T14:26:18+00:00"
+}

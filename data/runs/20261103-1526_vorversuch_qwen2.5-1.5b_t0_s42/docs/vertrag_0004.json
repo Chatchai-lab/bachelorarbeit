@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0004",
+  "doc_type": "vertrag",
+  "run_id": "20261103-1526_vorversuch_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2025-8769\",\n  \"vertragsdatum\": \"2025-10-14\",\n  \"auftraggeber\": {\n    \"name\": \"Säuberlich AG & Co. OHG\",\n    \"strasse\": \"Petros-Karge-Allee 951\",\n    \"plz\": \"88044\",\n    \"ort\": \"Bitterfeld\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Heinrich Lindau OHG mbH\",\n    \"strasse\": \"Arne-Fliegner-Platz 8-4\",\n    \"plz\": \"77598\",\n    \"ort\": \"Borna\"\n  },\n  \"leistungsgegenstand\": \"IT-Infrastruktur Wartung\",\n  \"vertragsbeginn\": \"2025-12-01\",\n  \"laufzeit_monate\": 12,\n  \"vertragsende\": \"2026-11-30\",\n  \"kuendigungsfrist\": \"2 Wochen zum Monatsende\",\n  \"verguetung_netto\": 1129.64,\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"automatisch um 3 Monate\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2025-8769",
+    "vertragsdatum": "2025-10-14",
+    "auftraggeber": {
+      "name": "Säuberlich AG & Co. OHG",
+      "strasse": "Petros-Karge-Allee 951",
+      "plz": "88044",
+      "ort": "Bitterfeld"
+    },
+    "auftragnehmer": {
+      "name": "Heinrich Lindau OHG mbH",
+      "strasse": "Arne-Fliegner-Platz 8-4",
+      "plz": "77598",
+      "ort": "Borna"
+    },
+    "leistungsgegenstand": "IT-Infrastruktur Wartung",
+    "vertragsbeginn": "2025-12-01",
+    "laufzeit_monate": 12,
+    "vertragsende": "2026-11-30",
+    "kuendigungsfrist": "2 Wochen zum Monatsende",
+    "verguetung_netto": 1129.64,
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "automatisch um 3 Monate"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1317.7,
+  "total_ms": 1316.7,
+  "load_ms": 1.8,
+  "prompt_eval_ms": 52.6,
+  "eval_ms": 1232.6,
+  "prompt_tokens": 1255,
+  "completion_tokens": 307,
+  "created_at": "2026-11-03T14:31:59+00:00"
+}

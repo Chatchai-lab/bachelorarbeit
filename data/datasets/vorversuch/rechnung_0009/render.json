@@ -1,0 +1,7 @@
+{
+  "branche": "Catering",
+  "kundennummer": "KD-77350",
+  "telefon": "+49(0) 278273884",
+  "ansprechpartner": "Ing. Severin Wohlgemut",
+  "layout": "rechnung_a.html.j2"
+}

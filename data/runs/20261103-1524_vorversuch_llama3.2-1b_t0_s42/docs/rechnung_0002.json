@@ -1,0 +1,66 @@
+{
+  "doc_id": "rechnung_0002",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1524_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2507-851\",\n  \"rechnungsdatum\": \"2707-07-25\",\n  \"leistungsdatum\": \"2707-07-25\",\n  \"lieferant\": {\n    \"name\": \"Tschentscher Gutknecht AG\",\n    \"strasse\": \"Faustallee 667\",\n    \"plz\": \"67879\",\n    \"ort\": \"Hainichen\"\n  },\n  \"lieferant_ust_id\": \"DE944271889\",\n  \"kunde\": {\n    \"name\": \"Tschentscher Gutknecht AG\",\n    \"strasse\": \"Faustallee 667\",\n    \"plz\": \"67879\",\n    \"ort\": \"Hainichen\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Kaffee- und Getränkepauschale, je Person\",\n      \"menge\": 40,\n      \"einheit\": \"Person\",\n      \"einzelpreis\": 7.67,\n      \"gesamtpreis\": 306.80\n    },\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": 25,\n      \"einheit\": \"Person\",\n      \"einzelpreis\": 20.61,\n      \"gesamtpreis\": 515.25\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete\",\n      \"menge\": 1,\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": 137.96,\n      \"gesamtpreis\": 137.96\n    }\n  ],\n  \"netto\": 960.01,\n  \"ust_satz\": 19,\n  \"ust_betrag\": 182.40,\n  \"brutto\": 1.14241,\n  \"zahlungsziel_tage\": 30,\n  \"iban\": \"DE12345678901234567890123456789\",\n  \"bic\": \"DE12345678901234567890123456789\" }",
+  "parsed": {
+    "rechnungsnummer": "2507-851",
+    "rechnungsdatum": "2707-07-25",
+    "leistungsdatum": "2707-07-25",
+    "lieferant": {
+      "name": "Tschentscher Gutknecht AG",
+      "strasse": "Faustallee 667",
+      "plz": "67879",
+      "ort": "Hainichen"
+    },
+    "lieferant_ust_id": "DE944271889",
+    "kunde": {
+      "name": "Tschentscher Gutknecht AG",
+      "strasse": "Faustallee 667",
+      "plz": "67879",
+      "ort": "Hainichen"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Kaffee- und Getränkepauschale, je Person",
+        "menge": 40,
+        "einheit": "Person",
+        "einzelpreis": 7.67,
+        "gesamtpreis": 306.8
+      },
+      {
+        "beschreibung": "Mittagsbuffet, je Person",
+        "menge": 25,
+        "einheit": "Person",
+        "einzelpreis": 20.61,
+        "gesamtpreis": 515.25
+      },
+      {
+        "beschreibung": "Geschirr- und Besteckmiete",
+        "menge": 1,
+        "einheit": "Pauschale",
+        "einzelpreis": 137.96,
+        "gesamtpreis": 137.96
+      }
+    ],
+    "netto": 960.01,
+    "ust_satz": 19,
+    "ust_betrag": 182.4,
+    "brutto": 1.14241,
+    "zahlungsziel_tage": 30,
+    "iban": "DE12345678901234567890123456789",
+    "bic": "DE12345678901234567890123456789"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1855.4,
+  "total_ms": 1854.2,
+  "load_ms": 2.0,
+  "prompt_eval_ms": 23.3,
+  "eval_ms": 1814.4,
+  "prompt_tokens": 838,
+  "completion_tokens": 460,
+  "created_at": "2026-11-03T14:25:38+00:00"
+}

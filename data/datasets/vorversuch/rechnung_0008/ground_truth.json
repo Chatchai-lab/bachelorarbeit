@@ -1,0 +1,35 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2507-023",
+  "rechnungsdatum": "2025-07-08",
+  "leistungsdatum": "2025-06-20",
+  "lieferant": {
+    "name": "Gorlitz KG",
+    "strasse": "Roman-Zobel-Gasse 5/6",
+    "plz": "07041",
+    "ort": "Backnang"
+  },
+  "lieferant_ust_id": "DE415024204",
+  "kunde": {
+    "name": "Heuser AG & Co. KGaA",
+    "strasse": "Wilma-Heß-Allee 4",
+    "plz": "15627",
+    "ort": "Kelheim"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Einrichtung Arbeitsplatzrechner",
+      "menge": 1.0,
+      "einheit": "Stück",
+      "einzelpreis": 93.02,
+      "gesamtpreis": 93.02
+    }
+  ],
+  "netto": 93.02,
+  "ust_satz": 19,
+  "ust_betrag": 17.67,
+  "brutto": 110.69,
+  "zahlungsziel_tage": 7,
+  "iban": "DE51500700101398084705",
+  "bic": "DEUTDEFFXXX"
+}

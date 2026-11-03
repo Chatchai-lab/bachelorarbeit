@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0010",
+  "doc_type": "vertrag",
+  "run_id": "20261103-1524_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2025-7488\",\n  \"vertragsdatum\": \"0101-01-01\",\n  \"auftraggeber\": {\n    \"name\": \"Drubin Kostolzin GmbH & Co. KGaA\",\n    \"strasse\": \"Karl-Josef-Weimer-Gasse 8/5\",\n    \"plz\": \"22695\",\n    \"ort\": \"Badoberan\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Kraushaar GmbH\",\n    \"strasse\": \"Krausestraße 66\",\n    \"plz\": \"70784\",\n    \"ort\": \"Viechtach\"\n  },\n  \"leistungsgegenstand\": \"laufende Finanzbuchhaltung\",\n  \"vertragsbeginn\": \"0101-01-01\",\n  \"laufzeit_monate\": 24,\n  \"vertragsende\": \"2802-02-28\",\n  \"kuendigungsfrist\": \"2 Wochen zum Monatsende\",\n  \"verguetung_netto\": 1226.69,\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"automatisch um 3 Monate\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2025-7488",
+    "vertragsdatum": "0101-01-01",
+    "auftraggeber": {
+      "name": "Drubin Kostolzin GmbH & Co. KGaA",
+      "strasse": "Karl-Josef-Weimer-Gasse 8/5",
+      "plz": "22695",
+      "ort": "Badoberan"
+    },
+    "auftragnehmer": {
+      "name": "Kraushaar GmbH",
+      "strasse": "Krausestraße 66",
+      "plz": "70784",
+      "ort": "Viechtach"
+    },
+    "leistungsgegenstand": "laufende Finanzbuchhaltung",
+    "vertragsbeginn": "0101-01-01",
+    "laufzeit_monate": 24,
+    "vertragsende": "2802-02-28",
+    "kuendigungsfrist": "2 Wochen zum Monatsende",
+    "verguetung_netto": 1226.69,
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "automatisch um 3 Monate"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1307.8,
+  "total_ms": 1306.6,
+  "load_ms": 1.9,
+  "prompt_eval_ms": 37.4,
+  "eval_ms": 1237.3,
+  "prompt_tokens": 1292,
+  "completion_tokens": 283,
+  "created_at": "2026-11-03T14:26:22+00:00"
+}

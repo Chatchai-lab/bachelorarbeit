@@ -1,0 +1,7 @@
+{
+  "branche": "IT-Dienstleistungen",
+  "kundennummer": "KD-27714",
+  "telefon": "(00346) 85919",
+  "ansprechpartner": "Lorenz Ditschlerin",
+  "layout": "rechnung_a.html.j2"
+}

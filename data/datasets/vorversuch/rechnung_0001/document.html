@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 20mm 20mm 22mm 22mm; }
+body { font-family: &#34;DejaVu Sans&#34;, &#34;Liberation Sans&#34;, Arial, sans-serif; font-size: 9.5pt; color: #111; line-height: 1.4; }
+h1 { font-size: 15pt; margin: 0 0 4mm 0; }
+h2 { font-size: 10.5pt; margin: 5mm 0 1.5mm 0; }
+p { margin: 0 0 2mm 0; }
+.small { font-size: 7.5pt; color: #444; }
+.right { text-align: right; }
+table { border-collapse: collapse; width: 100%; }
+
+.kopf { display: flex; justify-content: space-between; margin-bottom: 12mm; }
+.absender { font-size: 7.5pt; color: #444; border-bottom: 0.5pt solid #888; margin-bottom: 2mm; }
+.firma { text-align: right; }
+.firma strong { font-size: 12pt; }
+.infos td { padding: 0.5mm 0 0.5mm 4mm; }
+.pos th { border-bottom: 1pt solid #111; text-align: left; padding: 1.5mm 1mm; }
+.pos td { border-bottom: 0.4pt solid #ccc; padding: 1.5mm 1mm; vertical-align: top; }
+.pos .num { text-align: right; white-space: nowrap; }
+.summen { width: 75mm; margin-left: auto; margin-top: 4mm; }
+.summen td { padding: 1mm; }
+.summen tr.brutto td { border-top: 1pt solid #111; font-weight: bold; }
+.fuss { margin-top: 14mm; border-top: 0.5pt solid #888; padding-top: 2mm; display: flex; gap: 10mm; }
+</style>
+</head>
+<body>
+<div class="kopf">
+  <div>
+    <div class="absender">Ullmann e.V. · Harold-Ditschlerin-Weg 428 · 17853 Griesbach Rottal</div>
+    Oestrovsky<br>
+    Ditschleringasse 7625<br>
+    95609 Kassel
+  </div>
+  <div class="firma">
+    <strong>Ullmann e.V.</strong><br>
+    Harold-Ditschlerin-Weg 428<br>
+    17853 Griesbach Rottal<br>
+    Tel. (01490) 538301
+  </div>
+</div>
+
+<h1>Rechnung</h1>
+<table class="infos" style="width:auto; margin-bottom: 6mm;">
+  <tr><td style="padding-left:0">Rechnungsnummer:</td><td>2505-916</td></tr>
+  <tr><td style="padding-left:0">Rechnungsdatum:</td><td>25.05.2025</td></tr>
+  <tr><td style="padding-left:0">Leistungsdatum:</td><td>19.05.2025</td></tr>
+  <tr><td style="padding-left:0">Kundennummer:</td><td>KD-23074</td></tr>
+  <tr><td style="padding-left:0">Ansprechpartner:</td><td>Claire Vogt</td></tr>
+</table>
+
+<p>Sehr geehrte Damen und Herren,<br>für unsere Leistungen erlauben wir uns, Ihnen Folgendes in Rechnung zu stellen:</p>
+
+<table class="pos">
+  <tr><th>Pos.</th><th>Beschreibung</th><th class="num">Menge</th><th>Einheit</th><th class="num">Einzelpreis</th><th class="num">Gesamt</th></tr>
+  
+  <tr>
+    <td>1</td>
+    <td>Whiteboard 120 x 90 cm</td>
+    <td class="num">1</td>
+    <td>Stück</td>
+    <td class="num">124,84 €</td>
+    <td class="num">124,84 €</td>
+  </tr>
+  
+</table>
+
+<table class="summen">
+  <tr><td>Nettobetrag</td><td class="right">124,84 €</td></tr>
+  <tr><td>zzgl. 19 % USt.</td><td class="right">23,72 €</td></tr>
+  <tr class="brutto"><td>Rechnungsbetrag</td><td class="right">148,56 €</td></tr>
+</table>
+
+<p style="margin-top:6mm">
+Bitte überweisen Sie den Rechnungsbetrag innerhalb von 30 Tagen ohne Abzug auf das unten angegebene Konto.
+
+Bitte geben Sie bei Zahlung die Rechnungsnummer an.</p>
+<p>Mit freundlichen Grüßen<br>Ullmann e.V.</p>
+
+<div class="fuss small">
+  <div>Ullmann e.V.<br>Harold-Ditschlerin-Weg 428<br>17853 Griesbach Rottal</div>
+  <div>USt-IdNr.: DE178530478</div>
+  <div>IBAN: DE37 3704 0044 2192 2966 85<br>BIC: COBADEFFXXX</div>
+</div>
+</body>
+</html>

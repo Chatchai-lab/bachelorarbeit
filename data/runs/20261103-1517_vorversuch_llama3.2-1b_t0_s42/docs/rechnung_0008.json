@@ -1,0 +1,54 @@
+{
+  "doc_id": "rechnung_0008",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1517_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10G",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2507-023\",\n  \"rechnungsdatum\": \"08.07.2025\",\n  \"leistungsdatum\": \"20.06.2025\",\n  \"lieferant\": {\n    \"name\": \"Gorlitz KG\",\n    \"strasse\": \"Roman-Zobel-Gasse 5/6\",\n    \"plz\": \"07041\",\n    \"ort\": \"Backnang\"\n  },\n  \"lieferant_ust_id\": \"DE415024204\",\n  \"kunde\": {\n    \"name\": \"Gorlitz KG\",\n    \"strasse\": \"Roman-Zobel-Gasse 5/6\",\n    \"plz\": \"07041\",\n    \"ort\": \"Backnang\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Einrichtung Arbeitsplatzrechner\",\n      \"menge\": \"1\",\n      \"einheit\": \"Stück\",\n      \"einzelpreis\": \"93,02 €\",\n      \"gesamtpreis\": \"93,02 €\"\n    }\n  ],\n  \"netto\": \"110,69 €\",\n  \"ust_satz\": \"19 %\",\n  \"ust_betrag\": \"17,67 €\",\n  \"brutto\": \"110,69 €\",\n  \"zahlungsziel_tage\": \"7\",\n  \"iban\": \"DE51 5007 0010 1398 0847 05\",\n  \"bic\": \"DEUTDEFFXXX\",\n  \"ust_id\": \"DE415024204\",\n  \"konto\": \"DE51 5007 0010 1398 0847 05\"\n}",
+  "parsed": {
+    "rechnungsnummer": "2507-023",
+    "rechnungsdatum": "08.07.2025",
+    "leistungsdatum": "20.06.2025",
+    "lieferant": {
+      "name": "Gorlitz KG",
+      "strasse": "Roman-Zobel-Gasse 5/6",
+      "plz": "07041",
+      "ort": "Backnang"
+    },
+    "lieferant_ust_id": "DE415024204",
+    "kunde": {
+      "name": "Gorlitz KG",
+      "strasse": "Roman-Zobel-Gasse 5/6",
+      "plz": "07041",
+      "ort": "Backnang"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Einrichtung Arbeitsplatzrechner",
+        "menge": "1",
+        "einheit": "Stück",
+        "einzelpreis": "93,02 €",
+        "gesamtpreis": "93,02 €"
+      }
+    ],
+    "netto": "110,69 €",
+    "ust_satz": "19 %",
+    "ust_betrag": "17,67 €",
+    "brutto": "110,69 €",
+    "zahlungsziel_tage": "7",
+    "iban": "DE51 5007 0010 1398 0847 05",
+    "bic": "DEUTDEFFXXX",
+    "ust_id": "DE415024204",
+    "konto": "DE51 5007 0010 1398 0847 05"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1503.8,
+  "total_ms": 1501.8,
+  "load_ms": 3.0,
+  "prompt_eval_ms": 20.7,
+  "eval_ms": 1455.0,
+  "prompt_tokens": 815,
+  "completion_tokens": 362,
+  "created_at": "2026-11-03T14:18:50+00:00"
+}

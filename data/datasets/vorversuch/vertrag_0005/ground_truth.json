@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2025-4049",
+  "vertragsdatum": "2025-04-07",
+  "auftraggeber": {
+    "name": "Schomber GmbH",
+    "strasse": "Hanna-Freudenberger-Weg 1/2",
+    "plz": "63103",
+    "ort": "Meiningen"
+  },
+  "auftragnehmer": {
+    "name": "Rose Hendriks GmbH & Co. OHG",
+    "strasse": "Jens-Uwe-Otto-Weg 209",
+    "plz": "79698",
+    "ort": "Neunburg vorm Wald"
+  },
+  "leistungsgegenstand": "Gebäudereinigung",
+  "vertragsbeginn": "2025-06-01",
+  "laufzeit_monate": 24,
+  "vertragsende": "2027-05-31",
+  "kuendigungsfrist": "1 Monat zum Monatsende",
+  "verguetung_netto": 3100.5,
+  "verguetung_intervall": "vierteljährlich",
+  "verlaengerung": "automatisch um 12 Monate"
+}

@@ -1,0 +1,73 @@
+{
+  "doc_id": "rechnung_0009",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1519_vorversuch_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2507-349\",\n  \"rechnungsdatum\": \"2025-07-23\",\n  \"leistungsdatum\": \"2025-07-18\",\n  \"lieferant\": {\n    \"name\": \"Oestrovsky Hornig AG\",\n    \"strasse\": \"Hilde-Ortmann-Platz 49\",\n    \"plz\": \"55340\",\n    \"ort\": \"Göttingen\"\n  },\n  \"lieferant_ust_id\": \"DE330917032\",\n  \"kunde\": {\n    \"name\": \"Reichmann Reinhardt AG & Co. OHG\",\n    \"strasse\": \"Hilde-Ortmann-Platz 49\",\n    \"plz\": \"55340\",\n    \"ort\": \"Göttingen\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Kaffee- und Getränkepauschale, je Person\",\n      \"menge\": \"25\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"6.36\",\n      \"gesamtpreis\": \"159.00\"\n    },\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": \"20\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"30.88\",\n      \"gesamtpreis\": \"617.60\"\n    },\n    {\n      \"beschreibung\": \"Servicepersonal, 4 Std.\",\n      \"menge\": \"4\",\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": \"33.46\",\n      \"gesamtpreis\": \"133.84\"\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete, 1 Pauschale\",\n      \"menge\": \"1\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"104.79\",\n      \"gesamtpreis\": \"104.79\"\n    }\n  ],\n  \"netto\": \"1015.23\",\n  \"ust_satz\": \"19\",\n  \"ust_betrag\": \"192.89\",\n  \"brutto\": \"1208.12\",\n  \"zahlungsziel_tage\": \"30\",\n  \"iban\": \"DE25 2005 0550 1321 8350 72\",\n  \"bic\": \"HASPDEHHXXX\"\n}",
+  "parsed": {
+    "rechnungsnummer": "2507-349",
+    "rechnungsdatum": "2025-07-23",
+    "leistungsdatum": "2025-07-18",
+    "lieferant": {
+      "name": "Oestrovsky Hornig AG",
+      "strasse": "Hilde-Ortmann-Platz 49",
+      "plz": "55340",
+      "ort": "Göttingen"
+    },
+    "lieferant_ust_id": "DE330917032",
+    "kunde": {
+      "name": "Reichmann Reinhardt AG & Co. OHG",
+      "strasse": "Hilde-Ortmann-Platz 49",
+      "plz": "55340",
+      "ort": "Göttingen"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Kaffee- und Getränkepauschale, je Person",
+        "menge": "25",
+        "einheit": "Person",
+        "einzelpreis": "6.36",
+        "gesamtpreis": "159.00"
+      },
+      {
+        "beschreibung": "Mittagsbuffet, je Person",
+        "menge": "20",
+        "einheit": "Person",
+        "einzelpreis": "30.88",
+        "gesamtpreis": "617.60"
+      },
+      {
+        "beschreibung": "Servicepersonal, 4 Std.",
+        "menge": "4",
+        "einheit": "Std.",
+        "einzelpreis": "33.46",
+        "gesamtpreis": "133.84"
+      },
+      {
+        "beschreibung": "Geschirr- und Besteckmiete, 1 Pauschale",
+        "menge": "1",
+        "einheit": "Pauschale",
+        "einzelpreis": "104.79",
+        "gesamtpreis": "104.79"
+      }
+    ],
+    "netto": "1015.23",
+    "ust_satz": "19",
+    "ust_betrag": "192.89",
+    "brutto": "1208.12",
+    "zahlungsziel_tage": "30",
+    "iban": "DE25 2005 0550 1321 8350 72",
+    "bic": "HASPDEHHXXX"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 2458.8,
+  "total_ms": 2457.5,
+  "load_ms": 2.1,
+  "prompt_eval_ms": 40.7,
+  "eval_ms": 2385.4,
+  "prompt_tokens": 1004,
+  "completion_tokens": 605,
+  "created_at": "2026-11-03T14:24:00+00:00"
+}

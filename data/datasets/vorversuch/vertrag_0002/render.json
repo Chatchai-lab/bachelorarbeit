@@ -1,0 +1,56 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags ist die regelmäßige Unterhaltsreinigung der Büroräume des Auftraggebers einschließlich Sanitärbereichen, Teeküchen und Treppenhäusern gemäß dem in Anlage 1 beschriebenen Reinigungsplan durch den Auftragnehmer (nachfolgend „Leistungen“).",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Der Vertrag beginnt am 1. Dezember 2026 und wird für eine Laufzeit von zwölf Monaten fest abgeschlossen."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine vierteljährliche Pauschale in Höhe von 7.672,30 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Der Auftragnehmer stellt die Vergütung zu Beginn des jeweiligen Abrechnungszeitraums in Rechnung; Rechnungen sind innerhalb von 14 Tagen ohne Abzug zahlbar.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Beide Vertragsparteien sind berechtigt, diesen Vertrag unter Einhaltung einer Kündigungsfrist von 6 Monaten zum Ende der Vertragslaufzeit in Textform zu kündigen.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertragsverlängerung",
+      [
+        "Erfolgt keine fristgerechte Kündigung, verlängert sich die Vertragslaufzeit stillschweigend um jeweils 6 Monate."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Zerbst."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "30.10.2026",
+  "unterzeichner_ag": "Herr Sven Winkler MBA.",
+  "unterzeichner_an": "Ernst-Dieter Gumprich-Winkler",
+  "layout": "vertrag_a.html.j2"
+}

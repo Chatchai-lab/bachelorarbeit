@@ -1,0 +1,56 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "R504667",
+  "rechnungsdatum": "2026-06-07",
+  "leistungsdatum": "2026-05-28",
+  "lieferant": {
+    "name": "Pergande Junck GmbH & Co. KG",
+    "strasse": "Kitzmannweg 9/1",
+    "plz": "65890",
+    "ort": "Artern"
+  },
+  "lieferant_ust_id": "DE204999052",
+  "kunde": {
+    "name": "Krause Gieß AG",
+    "strasse": "Roskothallee 5",
+    "plz": "44829",
+    "ort": "Marktheidenfeld"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Steckdosenleiste Unterputz, 3-fach",
+      "menge": 2.0,
+      "einheit": "Stück",
+      "einzelpreis": 26.06,
+      "gesamtpreis": 52.12
+    },
+    {
+      "beschreibung": "Arbeitszeit Geselle",
+      "menge": 6.0,
+      "einheit": "Std.",
+      "einzelpreis": 57.74,
+      "gesamtpreis": 346.44
+    },
+    {
+      "beschreibung": "Installationsmaterial",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 157.73,
+      "gesamtpreis": 157.73
+    },
+    {
+      "beschreibung": "LED-Panel 60 x 60 cm",
+      "menge": 8.0,
+      "einheit": "Stück",
+      "einzelpreis": 88.27,
+      "gesamtpreis": 706.16
+    }
+  ],
+  "netto": 1262.45,
+  "ust_satz": 19,
+  "ust_betrag": 239.87,
+  "brutto": 1502.32,
+  "zahlungsziel_tage": 14,
+  "iban": "DE04100100101310232442",
+  "bic": "PBNKDEFFXXX"
+}

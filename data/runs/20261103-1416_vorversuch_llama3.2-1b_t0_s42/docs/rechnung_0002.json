@@ -1,0 +1,18 @@
+{
+  "doc_id": "rechnung_0002",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1416_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2507-851\",\n  \"rechnungsdatum\": \"27.07.2025\",\n  \"leistungsdatum\": \"27.07.2025\",\n  \"lieferant\": {\n    \"name\": \"Tschentscher Gutknecht AG\",\n    \"strasse\": \"Faustallee 667\",\n    \"plz\": \"67879\",\n    \"ort\": \"Hainichen\"\n  },\n  \"lieferant_ust_id\": \"DE944271889\",\n  \"kunde\": {\n    \"name\": \"Tschentscher Gutknecht AG\",\n    \"strasse\": \"Faustallee 667\",\n    \"plz\": \"67879\",\n    \"ort\": \"Hainichen\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Kaffee- und Getränkepauschale, je Person\",\n      \"menge\": \"40\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"7,67\",\n      \"gesamtpreis\": \"306,80\"\n    },\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": \"25\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"20,61\",\n      \"gesamtpreis\": \"515,25\"\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete\",\n      \"menge\": \"1\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"137,96\",\n      \"gesamtpreis\": \"137,96\"\n    }\n  ],\n  \"netto\": \"960,01\",\n  \"ust_satz\": \"19 %\",\n  \"ust_betrag\": \"182,40\",\n  \"brutto\": \"1.142,41\",\n  \"zahlungsziel_tage\": \"30\",\n  \"iban\": \"DE12345678901234567890\",\n  \"bic\": \"DE12345678901234567890\"",
+  "parsed": null,
+  "parse_error": "ungültiges JSON: Expecting ',' delimiter",
+  "done_reason": "stop",
+  "wall_ms": 3037.8,
+  "total_ms": 3035.6,
+  "load_ms": 4.5,
+  "prompt_eval_ms": 23.6,
+  "eval_ms": 2948.7,
+  "prompt_tokens": 838,
+  "completion_tokens": 455,
+  "created_at": "2026-11-03T14:02:41+00:00"
+}

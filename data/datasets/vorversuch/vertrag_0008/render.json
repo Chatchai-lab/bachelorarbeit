@@ -1,0 +1,56 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags ist die Räumung und Streuung der Gehwege, Zufahrten und Parkflächen auf dem Betriebsgelände des Auftraggebers in der Zeit von November bis März durch den Auftragnehmer (nachfolgend „Leistungen“).",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Der Vertrag beginnt am 1. April 2025 und wird für eine Laufzeit von 12 Monaten fest abgeschlossen."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine monatliche Pauschale in Höhe von 1.699,22 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Der Auftragnehmer stellt die Vergütung zu Beginn des jeweiligen Abrechnungszeitraums in Rechnung; Rechnungen sind innerhalb von 14 Tagen ohne Abzug zahlbar.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Der Vertrag kann von jeder Partei mit einer Frist von 3 Monaten zum Quartalsende schriftlich gekündigt werden.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertragsverlängerung",
+      [
+        "Wird der Vertrag nicht fristgerecht gekündigt, verlängert er sich automatisch um jeweils weitere 12 Monate."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Perleberg."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "7. März 2025",
+  "unterzeichner_ag": "Brunhilde Fiebig",
+  "unterzeichner_an": "Malte Junken",
+  "layout": "vertrag_a.html.j2"
+}

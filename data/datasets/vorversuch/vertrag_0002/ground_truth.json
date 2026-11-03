@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2026-9662",
+  "vertragsdatum": "2026-10-30",
+  "auftraggeber": {
+    "name": "Dietz KG",
+    "strasse": "Sigurd-Niemeier-Allee 4/8",
+    "plz": "05802",
+    "ort": "Zerbst"
+  },
+  "auftragnehmer": {
+    "name": "Schacht Gunpf GbR",
+    "strasse": "Kostolzinweg 8",
+    "plz": "71508",
+    "ort": "Staffelstein"
+  },
+  "leistungsgegenstand": "Gebäudereinigung",
+  "vertragsbeginn": "2026-12-01",
+  "laufzeit_monate": 12,
+  "vertragsende": "2027-11-30",
+  "kuendigungsfrist": "6 Monate zum Ende der Vertragslaufzeit",
+  "verguetung_netto": 7672.3,
+  "verguetung_intervall": "vierteljährlich",
+  "verlaengerung": "automatisch um 6 Monate"
+}

@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2026-1468",
+  "vertragsdatum": "2025-11-11",
+  "auftraggeber": {
+    "name": "Süßebier",
+    "strasse": "Zirmestraße 8-2",
+    "plz": "71338",
+    "ort": "Steinfurt"
+  },
+  "auftragnehmer": {
+    "name": "Hahn Gorlitz AG",
+    "strasse": "Ehlertallee 3/4",
+    "plz": "62362",
+    "ort": "Lobenstein"
+  },
+  "leistungsgegenstand": "Datenschutzbeauftragter",
+  "vertragsbeginn": "2026-01-01",
+  "laufzeit_monate": 36,
+  "vertragsende": "2028-12-31",
+  "kuendigungsfrist": "6 Monate zum Ende der Vertragslaufzeit",
+  "verguetung_netto": 2995.67,
+  "verguetung_intervall": "vierteljährlich",
+  "verlaengerung": "automatisch um 12 Monate"
+}

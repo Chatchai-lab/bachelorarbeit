@@ -1,0 +1,66 @@
+{
+  "doc_id": "rechnung_0007",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1524_vorversuch_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2508-106\",\n  \"rechnungsdatum\": \"0508-02-25\",\n  \"leistungsdatum\": \"1507-07-25\",\n  \"lieferant\": {\n    \"name\": \"Thanel\",\n    \"strasse\": \"Netteplatz 10/13\",\n    \"plz\": \"58721\",\n    \"ort\": \"Dinslaken\"\n  },\n  \"lieferant_ust_id\": \"DE815312393\",\n  \"kunde\": {\n    \"name\": \"Raphaela Wulff-Franke\",\n    \"strasse\": \"Trudel-Steinberg-Allee 45\",\n    \"plz\": \"58721\",\n    \"ort\": \"Dinslaken\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": 223.68,\n      \"einheit\": \"Person\",\n      \"einzelpreis\": 18.64,\n      \"gesamtpreis\": 223.68\n    },\n    {\n      \"beschreibung\": \"Servicepersonal 4 Std.\",\n      \"menge\": 146.72,\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": 36.68,\n      \"gesamtpreis\": 146.72\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete 1 Pauschale\",\n      \"menge\": 72.81,\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": 72.81,\n      \"gesamtpreis\": 72.81\n    }\n  ],\n  \"netto\": 443.21,\n  \"ust_satz\": 31,\n  \"ust_betrag\": 31,\n  \"brutto\": 474.23,\n  \"zahlungsziel_tage\": 14,\n  \"iban\": \"DE61 6005 0101 9221 0258 59\",\n  \"bic\": \"SOLADEST600\" }",
+  "parsed": {
+    "rechnungsnummer": "2508-106",
+    "rechnungsdatum": "0508-02-25",
+    "leistungsdatum": "1507-07-25",
+    "lieferant": {
+      "name": "Thanel",
+      "strasse": "Netteplatz 10/13",
+      "plz": "58721",
+      "ort": "Dinslaken"
+    },
+    "lieferant_ust_id": "DE815312393",
+    "kunde": {
+      "name": "Raphaela Wulff-Franke",
+      "strasse": "Trudel-Steinberg-Allee 45",
+      "plz": "58721",
+      "ort": "Dinslaken"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Mittagsbuffet, je Person",
+        "menge": 223.68,
+        "einheit": "Person",
+        "einzelpreis": 18.64,
+        "gesamtpreis": 223.68
+      },
+      {
+        "beschreibung": "Servicepersonal 4 Std.",
+        "menge": 146.72,
+        "einheit": "Std.",
+        "einzelpreis": 36.68,
+        "gesamtpreis": 146.72
+      },
+      {
+        "beschreibung": "Geschirr- und Besteckmiete 1 Pauschale",
+        "menge": 72.81,
+        "einheit": "Pauschale",
+        "einzelpreis": 72.81,
+        "gesamtpreis": 72.81
+      }
+    ],
+    "netto": 443.21,
+    "ust_satz": 31,
+    "ust_betrag": 31,
+    "brutto": 474.23,
+    "zahlungsziel_tage": 14,
+    "iban": "DE61 6005 0101 9221 0258 59",
+    "bic": "SOLADEST600"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1911.9,
+  "total_ms": 1910.5,
+  "load_ms": 2.1,
+  "prompt_eval_ms": 23.3,
+  "eval_ms": 1864.5,
+  "prompt_tokens": 842,
+  "completion_tokens": 461,
+  "created_at": "2026-11-03T14:25:51+00:00"
+}

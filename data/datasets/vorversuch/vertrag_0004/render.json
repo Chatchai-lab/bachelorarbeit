@@ -1,0 +1,56 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags ist die laufende Wartung der IT-Infrastruktur des Auftraggebers, insbesondere der Server, Netzwerkkomponenten und Arbeitsplatzrechner, sowie einen telefonischen Support an Werktagen von 8 bis 17 Uhr durch den Auftragnehmer (nachfolgend „Leistungen“).",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Der Vertrag beginnt am 01.12.2025 und wird für eine Laufzeit von zwölf Monaten fest abgeschlossen."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine monatliche Pauschale in Höhe von 1.129,64 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Die Vergütung ist jeweils im Voraus bis zum dritten Werktag des Abrechnungszeitraums fällig.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Der Vertrag kann von jeder Partei mit einer Frist von vier Wochen zum Monatsende schriftlich gekündigt werden.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertragsverlängerung",
+      [
+        "Wird der Vertrag nicht fristgerecht gekündigt, verlängert er sich automatisch um jeweils weitere zwölf Monate."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Bitterfeld."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "14. Oktober 2025",
+  "unterzeichner_ag": "Eugenie Pergande B.Eng.",
+  "unterzeichner_an": "Jovan Weihmann-Vollbrecht",
+  "layout": "vertrag_a.html.j2"
+}
