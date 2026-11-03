@@ -78,6 +78,7 @@ pytest             # alle Tests sollten durchlaufen
 | `--temperature` | `0`           | Hauptlauf 0, Stabilitätstest 0.7                              |
 | `--seed`        | `42`          |                                                               |
 | `--fmt`         | `none`        | `json` (JSON-Modus) oder `schema` (Structured Output)         |
+| `--num-predict` | `1024`        | maximale Antwortlänge in Tokens (vollständige Antwort ca. 500) |
 | `--run-id`      | automatisch   | gleiche ID erneut starten = Wiederaufnahme nach Abbruch      |
 
 Lange Läufe ohne offenes Terminal:

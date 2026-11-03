@@ -168,6 +168,7 @@ def main(
     seed: int = 42,
     fmt: str = "none",
     num_ctx: int = 8192,
+    num_predict: int = 1024,
     run_id: str = "",
 ):
     """fmt: none (freie Antwort), json (Ollama-JSON-Modus) oder schema (schemagebunden)."""
@@ -191,7 +192,7 @@ def main(
 
     slug = model.replace(":", "-").replace("/", "-")
     run_id = run_id or f"{datetime.now():%Y%m%d-%H%M}_{manifest['name']}_{slug}_t{temperature:g}_s{seed}"
-    options = {"temperature": temperature, "seed": seed, "num_ctx": num_ctx, "num_predict": 2048}
+    options = {"temperature": temperature, "seed": seed, "num_ctx": num_ctx, "num_predict": num_predict}
     protocol = {
         "run_id": run_id,
         "dataset": {"name": manifest["name"], "seed": manifest["seed"], "path": str(ds)},
