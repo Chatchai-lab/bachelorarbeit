@@ -32,7 +32,7 @@ from pathlib import Path
 
 import modal
 
-GPU = "L4"  # für alle Läufe gleich lassen, damit Latenzen vergleichbar sind
+from common.hardware import MODAL_GPU as GPU  # A10, für die ganze Arbeit festgelegt
 # Nach dem Vorversuch auf eine feste Version setzen, z. B. "0.13.0"
 OLLAMA_VERSION: str | None = None
 
@@ -63,10 +63,19 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
     if oc.ensure_model(model):
         models_volume.commit()
 
+    from common.hardware import check_gpu
+
+    env = oc.environment_info()
+    run_dir = Path("/results") / run_id
+    previous_gpu = None
+    if (run_dir / "run.json").exists():  # Wiederaufnahme: gleiche GPU erzwingen
+        previous_gpu = json.loads((run_dir / "run.json").read_text())["environment"].get("gpu")
+    check_gpu(env.get("gpu"), previous_gpu)
+
     protocol = {
         **protocol,
         "model": oc.model_info(model),
-        "environment": oc.environment_info(),
+        "environment": env,
         "started_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
     print(json.dumps(protocol["model"], indent=2), flush=True)
@@ -77,7 +86,6 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
     # Aufwärmen: Modell in den GPU-Speicher laden, nicht protokolliert
     oc.chat(model, [{"role": "user", "content": "Hallo"}], {**options, "num_predict": 1}, think=think)
 
-    run_dir = Path("/results") / run_id
     (run_dir / "docs").mkdir(parents=True, exist_ok=True)
     (run_dir / "run.json").write_text(json.dumps(protocol, ensure_ascii=False, indent=2))
     results_volume.commit()
@@ -105,6 +113,7 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
             "doc_type": doc["doc_type"],
             "run_id": run_id,
             "model": model,
+            "gpu": env.get("gpu"),
             "raw_output": resp.pop("content"),
             "parsed": parsed,
             "parse_error": error,

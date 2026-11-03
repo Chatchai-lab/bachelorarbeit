@@ -20,7 +20,7 @@ Chatchai Sirichot, Hochschule Darmstadt (h_da), Fachbereich Informatik
 | `tests/`       | Unit-Tests                                           | lokal     |          |
 
 Alles, was in Latenzmessungen eingeht (Extraktion und alle Prüfstufen),
-läuft auf Modal auf demselben GPU-Typ (L4). Lokal laufen nur Schritte ohne
+läuft auf Modal auf demselben GPU-Typ: NVIDIA A10 (24 GB), festgelegt in `common/hardware.py`. Lokal laufen nur Schritte ohne
 Latenzmessung.
 
 ## Einrichtung (einmalig)
