@@ -1,0 +1,66 @@
+{
+  "doc_id": "rechnung_0004",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1558_vorversuch2_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"R217298\",\n  \"rechnungsdatum\": \"27.12.2025\",\n  \"leistungsdatum\": \"17.12.2025\",\n  \"lieferant\": {\n    \"name\": \"Kitzmann Junken Stiftung & Co. KGaA\",\n    \"strasse\": \"Wilmsplatz 2\",\n    \"plz\": \"45777\",\n    \"ort\": \"Reutlingen\"\n  },\n  \"lieferant_ust_id\": \"DE572777398\",\n  \"kunde\": {\n    \"name\": \"Kitzmann Junken Stiftung & Co. KGaA\",\n    \"strasse\": \"Mitschkeplatz 47-97\",\n    \"plz\": \"85982\",\n    \"ort\": \"Eisleben\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Anfahrtspauschale\",\n      \"menge\": \"1\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"44,68\",\n      \"gesamtpreis\": \"44,68\"\n    },\n    {\n      \"beschreibung\": \"Arbeitszeit Elektroinstallation\",\n      \"menge\": \"6\",\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": \"68,16\",\n      \"gesamtpreis\": \"408,96\"\n    },\n    {\n      \"beschreibung\": \"Arbeitszeit Geselle\",\n      \"menge\": \"4\",\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": \"61,64\",\n      \"gesamtpreis\": \"246,56\"\n    }\n  ],\n  \"netto\": \"700,20\",\n  \"ust_satz\": \"19 %\",\n  \"ust_betrag\": \"133,04\",\n  \"brutto\": \"833,24\",\n  \"zahlungsziel_tage\": \"30\",\n  \"iban\": \"DE572777398\",\n  \"bic\": \"DE572777398\" }",
+  "parsed": {
+    "rechnungsnummer": "R217298",
+    "rechnungsdatum": "27.12.2025",
+    "leistungsdatum": "17.12.2025",
+    "lieferant": {
+      "name": "Kitzmann Junken Stiftung & Co. KGaA",
+      "strasse": "Wilmsplatz 2",
+      "plz": "45777",
+      "ort": "Reutlingen"
+    },
+    "lieferant_ust_id": "DE572777398",
+    "kunde": {
+      "name": "Kitzmann Junken Stiftung & Co. KGaA",
+      "strasse": "Mitschkeplatz 47-97",
+      "plz": "85982",
+      "ort": "Eisleben"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Anfahrtspauschale",
+        "menge": "1",
+        "einheit": "Pauschale",
+        "einzelpreis": "44,68",
+        "gesamtpreis": "44,68"
+      },
+      {
+        "beschreibung": "Arbeitszeit Elektroinstallation",
+        "menge": "6",
+        "einheit": "Std.",
+        "einzelpreis": "68,16",
+        "gesamtpreis": "408,96"
+      },
+      {
+        "beschreibung": "Arbeitszeit Geselle",
+        "menge": "4",
+        "einheit": "Std.",
+        "einzelpreis": "61,64",
+        "gesamtpreis": "246,56"
+      }
+    ],
+    "netto": "700,20",
+    "ust_satz": "19 %",
+    "ust_betrag": "133,04",
+    "brutto": "833,24",
+    "zahlungsziel_tage": "30",
+    "iban": "DE572777398",
+    "bic": "DE572777398"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1745.4,
+  "total_ms": 1744.2,
+  "load_ms": 1.8,
+  "prompt_eval_ms": 33.9,
+  "eval_ms": 1692.3,
+  "prompt_tokens": 846,
+  "completion_tokens": 445,
+  "created_at": "2026-11-03T14:59:50+00:00"
+}

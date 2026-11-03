@@ -1,0 +1,56 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags sind Leistungen des Auftragnehmers im Bereich „Webhosting und Betreuung“ (nachfolgend „Leistungen“). Diese umfassen den Betrieb und die technische Betreuung der Website des Auftraggebers einschließlich Hosting, Sicherheitsupdates, täglicher Datensicherung und bis zu vier Stunden inhaltlicher Pflege pro Monat.",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Das Vertragsverhältnis beginnt am 1. März 2026. Die feste Vertragslaufzeit beträgt zwölf Monate und endet am 28.02.2027."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine vierteljährliche Pauschale in Höhe von 1.477,24 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Der Auftragnehmer stellt die Vergütung zu Beginn des jeweiligen Abrechnungszeitraums in Rechnung; Rechnungen sind innerhalb von 14 Tagen ohne Abzug zahlbar.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Beide Vertragsparteien sind berechtigt, diesen Vertrag unter Einhaltung einer Kündigungsfrist von einem Monat zum Monatsende in Textform zu kündigen.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertragsverlängerung",
+      [
+        "Wird der Vertrag nicht fristgerecht gekündigt, verlängert er sich automatisch um jeweils weitere sechs Monate."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Meiningen."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "10. Januar 2026",
+  "unterzeichner_ag": "Univ.Prof. Jann Becker",
+  "unterzeichner_an": "Sieglinde Albers",
+  "layout": "vertrag_a.html.j2"
+}

@@ -1,0 +1,56 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags sind Leistungen des Auftragnehmers im Bereich „IT-Wartung und Support“ (nachfolgend „Leistungen“). Diese umfassen die laufende Wartung der IT-Infrastruktur des Auftraggebers, insbesondere der Server, Netzwerkkomponenten und Arbeitsplatzrechner, sowie einen telefonischen Support an Werktagen von 8 bis 17 Uhr.",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Der Vertrag beginnt am 1. Mai 2027 und wird für eine Laufzeit von zwölf Monaten fest abgeschlossen; er endet am 30.04.2028."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine monatliche Pauschale in Höhe von 2.470,21 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Der Auftragnehmer stellt die Vergütung zu Beginn des jeweiligen Abrechnungszeitraums in Rechnung; Rechnungen sind innerhalb von 14 Tagen ohne Abzug zahlbar.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Beide Vertragsparteien sind berechtigt, diesen Vertrag unter Einhaltung einer Kündigungsfrist von vier Wochen zum Monatsende in Textform zu kündigen.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertragsverlängerung",
+      [
+        "Wird der Vertrag nicht fristgerecht gekündigt, verlängert er sich automatisch um jeweils weitere sechs Monate."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Backnang."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "16.04.2027",
+  "unterzeichner_ag": "Vitali Thies",
+  "unterzeichner_an": "Wilma Birnbaum MBA.",
+  "layout": "vertrag_a.html.j2"
+}

@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2027-1055",
+  "vertragsdatum": "2027-04-16",
+  "auftraggeber": {
+    "name": "Putz GbR",
+    "strasse": "Schäfergasse 155",
+    "plz": "77705",
+    "ort": "Backnang"
+  },
+  "auftragnehmer": {
+    "name": "Eckbauer Kusch GbR",
+    "strasse": "Hermannweg 7",
+    "plz": "30622",
+    "ort": "Sonneberg"
+  },
+  "leistungsgegenstand": "IT-Wartung und Support",
+  "vertragsbeginn": "2027-05-01",
+  "laufzeit_monate": 12,
+  "vertragsende": "2028-04-30",
+  "kuendigungsfrist": "4 Wochen zum Monatsende",
+  "verguetung_netto": 2470.21,
+  "verguetung_intervall": "monatlich",
+  "verlaengerung": "automatisch um 6 Monate"
+}

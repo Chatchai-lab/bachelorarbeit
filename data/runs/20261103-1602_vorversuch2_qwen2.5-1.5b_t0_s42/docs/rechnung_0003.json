@@ -1,0 +1,73 @@
+{
+  "doc_id": "rechnung_0003",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1602_vorversuch2_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"R504667\",\n  \"rechnungsdatum\": \"2026-06-07\",\n  \"leistungsdatum\": \"2026-05-28\",\n  \"lieferant\": {\n    \"name\": \"Krause Gieß AG\",\n    \"strasse\": \"Roskothallee 5\",\n    \"plz\": \"44829\",\n    \"ort\": \"Marktheidenfeld\"\n  },\n  \"lieferant_ust_id\": \"DE204999052\",\n  \"kunde\": {\n    \"name\": \"Pergande Junck GmbH & Co. KG\",\n    \"strasse\": \"Kitzmannweg 9/1\",\n    \"plz\": \"65890\",\n    \"ort\": \"Artern\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Steckdosenleiste Unterputz, 3-fach\",\n      \"menge\": \"2 Stück\",\n      \"einheit\": \"Stück\",\n      \"einzelpreis\": \"26.06 €\",\n      \"gesamtpreis\": \"52.12 €\"\n    },\n    {\n      \"beschreibung\": \"Arbeitszeit Geselle\",\n      \"menge\": \"6 Std.\",\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": \"57.74 €\",\n      \"gesamtpreis\": \"346.44 €\"\n    },\n    {\n      \"beschreibung\": \"Installationsmaterial\",\n      \"menge\": \"1 Pauschale\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"157.73 €\",\n      \"gesamtpreis\": \"157.73 €\"\n    },\n    {\n      \"beschreibung\": \"LED-Panel\",\n      \"menge\": \"60 x 60 cm\",\n      \"einheit\": \"Stück\",\n      \"einzelpreis\": \"88.27 €\",\n      \"gesamtpreis\": \"706.16 €\"\n    }\n  ],\n  \"netto\": \"1.262.45 €\",\n  \"ust_satz\": \"19 %\",\n  \"ust_betrag\": \"239.87 €\",\n  \"brutto\": \"1.502.32 €\",\n  \"zahlungsziel_tage\": \"14\",\n  \"iban\": \"DE04 1001 0010 1310 2324 42\",\n  \"bic\": \"PBNKDEFFXXX\"\n}",
+  "parsed": {
+    "rechnungsnummer": "R504667",
+    "rechnungsdatum": "2026-06-07",
+    "leistungsdatum": "2026-05-28",
+    "lieferant": {
+      "name": "Krause Gieß AG",
+      "strasse": "Roskothallee 5",
+      "plz": "44829",
+      "ort": "Marktheidenfeld"
+    },
+    "lieferant_ust_id": "DE204999052",
+    "kunde": {
+      "name": "Pergande Junck GmbH & Co. KG",
+      "strasse": "Kitzmannweg 9/1",
+      "plz": "65890",
+      "ort": "Artern"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Steckdosenleiste Unterputz, 3-fach",
+        "menge": "2 Stück",
+        "einheit": "Stück",
+        "einzelpreis": "26.06 €",
+        "gesamtpreis": "52.12 €"
+      },
+      {
+        "beschreibung": "Arbeitszeit Geselle",
+        "menge": "6 Std.",
+        "einheit": "Std.",
+        "einzelpreis": "57.74 €",
+        "gesamtpreis": "346.44 €"
+      },
+      {
+        "beschreibung": "Installationsmaterial",
+        "menge": "1 Pauschale",
+        "einheit": "Pauschale",
+        "einzelpreis": "157.73 €",
+        "gesamtpreis": "157.73 €"
+      },
+      {
+        "beschreibung": "LED-Panel",
+        "menge": "60 x 60 cm",
+        "einheit": "Stück",
+        "einzelpreis": "88.27 €",
+        "gesamtpreis": "706.16 €"
+      }
+    ],
+    "netto": "1.262.45 €",
+    "ust_satz": "19 %",
+    "ust_betrag": "239.87 €",
+    "brutto": "1.502.32 €",
+    "zahlungsziel_tage": "14",
+    "iban": "DE04 1001 0010 1310 2324 42",
+    "bic": "PBNKDEFFXXX"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 2434.8,
+  "total_ms": 2433.4,
+  "load_ms": 2.1,
+  "prompt_eval_ms": 37.4,
+  "eval_ms": 2378.1,
+  "prompt_tokens": 973,
+  "completion_tokens": 598,
+  "created_at": "2026-11-03T15:03:44+00:00"
+}

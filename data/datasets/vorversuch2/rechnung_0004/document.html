@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 20mm 20mm 22mm 22mm; }
+body { font-family: &#34;DejaVu Sans&#34;, &#34;Liberation Sans&#34;, Arial, sans-serif; font-size: 9.5pt; color: #111; line-height: 1.4; }
+h1 { font-size: 15pt; margin: 0 0 4mm 0; }
+h2 { font-size: 10.5pt; margin: 5mm 0 1.5mm 0; }
+p { margin: 0 0 2mm 0; }
+.small { font-size: 7.5pt; color: #444; }
+.right { text-align: right; }
+table { border-collapse: collapse; width: 100%; }
+
+/* Briefkopf über der Anschrift, nicht daneben: sonst vermischt die
+   Textextraktion die Zeilen beider Blöcke */
+.briefkopf { text-align: right; margin-bottom: 6mm; }
+.briefkopf strong { font-size: 12pt; }
+.anschrift { width: 85mm; margin-bottom: 10mm; }
+.absender { font-size: 7.5pt; color: #444; border-bottom: 0.5pt solid #888; margin-bottom: 2mm; }
+.infos td { padding: 0.5mm 0 0.5mm 4mm; }
+.pos th { border-bottom: 1pt solid #111; text-align: left; padding: 1.5mm 1mm; }
+.pos td { border-bottom: 0.4pt solid #ccc; padding: 1.5mm 1mm; vertical-align: top; }
+.pos .num { text-align: right; white-space: nowrap; }
+.summen { width: 75mm; margin-left: auto; margin-top: 4mm; }
+.summen td { padding: 1mm; }
+.summen tr.brutto td { border-top: 1pt solid #111; font-weight: bold; }
+.fuss { margin-top: 14mm; border-top: 0.5pt solid #888; padding-top: 2mm; display: flex; gap: 10mm; }
+</style>
+</head>
+<body>
+<div class="briefkopf">
+  <strong>Kitzmann Junken Stiftung &amp; Co. KGaA</strong><br>
+  Wilmsplatz 2<br>
+  45777 Reutlingen<br>
+  Tel. +49 (0) 3472 702901
+</div>
+<div class="anschrift">
+  <div class="absender">Kitzmann Junken Stiftung &amp; Co. KGaA · Wilmsplatz 2 · 45777 Reutlingen</div>
+  Hornich AG<br>
+  Mitschkeplatz 47-97<br>
+  85982 Eisleben
+</div>
+
+<h1>Rechnung</h1>
+<table class="infos" style="width:auto; margin-bottom: 6mm;">
+  <tr><td style="padding-left:0">Rechnungsnummer:</td><td>R217298</td></tr>
+  <tr><td style="padding-left:0">Rechnungsdatum:</td><td>27.12.2025</td></tr>
+  <tr><td style="padding-left:0">Leistungsdatum:</td><td>17.12.2025</td></tr>
+  <tr><td style="padding-left:0">Kundennummer:</td><td>KD-77280</td></tr>
+  <tr><td style="padding-left:0">Ansprechpartner:</td><td>Klaus-Jürgen Christoph</td></tr>
+</table>
+
+<p>Sehr geehrte Damen und Herren,<br>für unsere Leistungen erlauben wir uns, Ihnen Folgendes in Rechnung zu stellen:</p>
+
+<table class="pos">
+  <tr><th>Pos.</th><th>Beschreibung</th><th class="num">Menge</th><th>Einheit</th><th class="num">Einzelpreis</th><th class="num">Gesamt</th></tr>
+  
+  <tr>
+    <td>1</td>
+    <td>Anfahrtspauschale</td>
+    <td class="num">1</td>
+    <td>Pauschale</td>
+    <td class="num">44,68 €</td>
+    <td class="num">44,68 €</td>
+  </tr>
+  
+  <tr>
+    <td>2</td>
+    <td>Arbeitszeit Elektroinstallation</td>
+    <td class="num">6</td>
+    <td>Std.</td>
+    <td class="num">68,16 €</td>
+    <td class="num">408,96 €</td>
+  </tr>
+  
+  <tr>
+    <td>3</td>
+    <td>Arbeitszeit Geselle</td>
+    <td class="num">4</td>
+    <td>Std.</td>
+    <td class="num">61,64 €</td>
+    <td class="num">246,56 €</td>
+  </tr>
+  
+</table>
+
+<table class="summen">
+  <tr><td>Nettobetrag</td><td class="right">700,20 €</td></tr>
+  <tr><td>zzgl. 19 % USt.</td><td class="right">133,04 €</td></tr>
+  <tr class="brutto"><td>Rechnungsbetrag</td><td class="right">833,24 €</td></tr>
+</table>
+
+<p style="margin-top:6mm">
+Der Rechnungsbetrag ist innerhalb von 30 Tagen ohne Abzug zahlbar.
+
+Bitte geben Sie bei Zahlung die Rechnungsnummer an.</p>
+<p>Mit freundlichen Grüßen<br>Kitzmann Junken Stiftung &amp; Co. KGaA</p>
+
+<div class="fuss small">
+  <div>Kitzmann Junken Stiftung &amp; Co. KGaA<br>Wilmsplatz 2<br>45777 Reutlingen</div>
+  <div>USt-IdNr.: DE572777398</div>
+  
+</div>
+</body>
+</html>

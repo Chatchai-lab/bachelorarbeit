@@ -1,0 +1,32 @@
+Zänker GmbH & Co. KG
+Drewesweg 9
+47986 Schlüchtern
+Tel. 01211 65161
+Zänker GmbH & Co. KG · Drewesweg 9 · 47986 Schlüchtern
+Fliegner Hande AG
+Striebitzstr. 23/40
+98746 Wurzen
+Rechnung
+Rechnungsnummer: R730965
+Rechnungsdatum: 23.03.2026
+Leistungsdatum: 06.03.2026
+Kundennummer: KD-62365
+Ansprechpartner: Karl-Heinrich Holzapfel
+Sehr geehrte Damen und Herren,
+für unsere Leistungen erlauben wir uns, Ihnen Folgendes in Rechnung zu stellen:
+Pos. Beschreibung Menge Einheit Einzelpreis Gesamt
+1 Einrichtung Arbeitsplatzrechner 3 Stück 88,74 € 266,22 €
+2 Softwareentwicklung (Backend) 24 Std. 113,46 € 2.723,04 €
+3 Lizenz Projektmanagement-Software (12 Monate) 15 Lizenz 121,68 € 1.825,20 €
+4 Wartung Serverinfrastruktur 1 Pauschale 349,87 € 349,87 €
+5 Schulung Datenschutz für Mitarbeitende 1 Tag 1.181,26 € 1.181,26 €
+Nettobetrag 6.345,59 €
+zzgl. 19 % USt. 1.205,66 €
+Rechnungsbetrag 7.551,25 €
+Bitte überweisen Sie den Rechnungsbetrag innerhalb von 7 Tagen ohne Abzug auf das unten
+angegebene Konto. Bitte geben Sie bei Zahlung die Rechnungsnummer an.
+Mit freundlichen Grüßen
+Zänker GmbH & Co. KG
+Zänker GmbH & Co. KG USt-IdNr.: DE874648121 IBAN: DE30 6005 0101 0418 9962 54
+Drewesweg 9 BIC: SOLADEST600
+47986 Schlüchtern

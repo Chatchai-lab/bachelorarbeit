@@ -1,0 +1,7 @@
+{
+  "branche": "IT-Dienstleistungen",
+  "kundennummer": "KD-62365",
+  "telefon": "01211 65161",
+  "ansprechpartner": "Karl-Heinrich Holzapfel",
+  "layout": "rechnung_a.html.j2"
+}

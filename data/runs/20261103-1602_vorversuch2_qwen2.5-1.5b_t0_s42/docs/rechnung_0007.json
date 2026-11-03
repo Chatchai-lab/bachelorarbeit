@@ -1,0 +1,66 @@
+{
+  "doc_id": "rechnung_0007",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1602_vorversuch2_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2508-106\",\n  \"rechnungsdatum\": \"2025-08-05\",\n  \"leistungsdatum\": \"2025-07-15\",\n  \"lieferant\": {\n    \"name\": \"Thanel\",\n    \"strasse\": \"Netteplatz 10/13\",\n    \"plz\": \"58721 Dinslaken\",\n    \"ort\": \"Dinslaken\"\n  },\n  \"lieferant_ust_id\": \"DE815312393\",\n  \"kunde\": {\n    \"name\": \"Thanel\",\n    \"strasse\": \"Netteplatz 10/13\",\n    \"plz\": \"58721 Dinslaken\",\n    \"ort\": \"Dinslaken\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": \"12\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"18.64\",\n      \"gesamtpreis\": \"223.68\"\n    },\n    {\n      \"beschreibung\": \"Servicepersonal\",\n      \"menge\": \"4 Std.\",\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": \"36.68\",\n      \"gesamtpreis\": \"146.72\"\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete\",\n      \"menge\": \"1 Pauschale\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"72.81\",\n      \"gesamtpreis\": \"72.81\"\n    }\n  ],\n  \"netto\": \"443.21\",\n  \"ust_satz\": \"7\",\n  \"ust_betrag\": \"31.02\",\n  \"brutto\": \"474.23\",\n  \"zahlungsziel_tage\": \"14\",\n  \"iban\": \"DE61 6005 0101 9221 0258 59\",\n  \"bic\": \"SOLADEST600\"\n}",
+  "parsed": {
+    "rechnungsnummer": "2508-106",
+    "rechnungsdatum": "2025-08-05",
+    "leistungsdatum": "2025-07-15",
+    "lieferant": {
+      "name": "Thanel",
+      "strasse": "Netteplatz 10/13",
+      "plz": "58721 Dinslaken",
+      "ort": "Dinslaken"
+    },
+    "lieferant_ust_id": "DE815312393",
+    "kunde": {
+      "name": "Thanel",
+      "strasse": "Netteplatz 10/13",
+      "plz": "58721 Dinslaken",
+      "ort": "Dinslaken"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Mittagsbuffet, je Person",
+        "menge": "12",
+        "einheit": "Person",
+        "einzelpreis": "18.64",
+        "gesamtpreis": "223.68"
+      },
+      {
+        "beschreibung": "Servicepersonal",
+        "menge": "4 Std.",
+        "einheit": "Std.",
+        "einzelpreis": "36.68",
+        "gesamtpreis": "146.72"
+      },
+      {
+        "beschreibung": "Geschirr- und Besteckmiete",
+        "menge": "1 Pauschale",
+        "einheit": "Pauschale",
+        "einzelpreis": "72.81",
+        "gesamtpreis": "72.81"
+      }
+    ],
+    "netto": "443.21",
+    "ust_satz": "7",
+    "ust_betrag": "31.02",
+    "brutto": "474.23",
+    "zahlungsziel_tage": "14",
+    "iban": "DE61 6005 0101 9221 0258 59",
+    "bic": "SOLADEST600"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 2085.4,
+  "total_ms": 2084.2,
+  "load_ms": 2.4,
+  "prompt_eval_ms": 34.4,
+  "eval_ms": 2022.6,
+  "prompt_tokens": 917,
+  "completion_tokens": 511,
+  "created_at": "2026-11-03T15:03:58+00:00"
+}

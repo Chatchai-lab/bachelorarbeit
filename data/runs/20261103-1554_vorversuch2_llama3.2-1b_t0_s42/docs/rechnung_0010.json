@@ -1,0 +1,19 @@
+{
+  "doc_id": "rechnung_0010",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1554_vorversuch2_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"R730965\",\n  \"rechnungsdatum\": \"23.03.2026\",\n  \"leistungsdatum\": \"06.03.2026\",\n  \"lieferant\": {\n    \"name\": \"Zänker GmbH & Co. KG\",\n    \"strasse\": \"Drewesweg 9\",\n    \"plz\": \"47986\",\n    \"ort\": \"Schlüchtern\"\n  },\n  \"lieferant_ust_id\": \"DE874648121\",\n  \"kunde\": {\n    \"name\": \"Zänker GmbH & Co. KG\",\n    \"strasse\": \"Drewesweg 9\",\n    \"plz\": \"47986\",\n    \"ort\": \"Schlüchtern\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Einrichtung Arbeitsplatzrechner\",\n      \"menge\": \"3\",\n      \"einheit\": \"Stück\",\n      \"einzelpreis\": \"88,74 €\",\n      \"gesamtpreis\": \"266,22 €\"\n    },\n    {\n      \"beschreibung\": \"Softwareentwicklung (Backend)\",\n      \"menge\": \"24\",\n      \"einheit\": \"Stunde\",\n      \"einzelpreis\": \"113,46 €\",\n      \"gesamtpreis\": \"2.723,04 €\"\n    },\n    {\n      \"beschreibung\": \"Lizenz Projektmanagement-Software (12 Monate)\",\n      \"menge\": \"15\",\n      \"einheit\": \"Lizenz\",\n      \"einzelpreis\": \"121,68 €\",\n      \"gesamtpreis\": \"1.825,20 €\"\n    },\n    {\n      \"beschreibung\": \"Wartung Serverinfrastruktur\",\n      \"menge\": \"1\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"349,87 €\",\n      \"gesamtpreis\": \"349,87 €\"\n    },\n    {\n      \"beschreibung\": \"Schulung Datenschutz für Mitarbeitende\",\n      \"menge\": \"1\",\n      \"einheit\": \"Tag\",\n      \"einzelpreis\": \"1181,26 €\",\n      \"gesamtpreis\": \"1181,26 €\"\n    }\n  ],\n  \"netto\": \"6.345,59 €\",\n  \"ust_satz\": \"19 %\",\n  \"ust_betrag\": \"1.205,66 €\",\n  \"brutto\": \"7.551,25 €\",\n  \"zahlungsziel_tage\": \"7\",\n  \"iban\": \"DE30 6005 0101 0418 9962 54\",\n  \"bic\": \"SOLADEST600\"",
+  "parsed": null,
+  "parse_error": "ungültiges JSON: Expecting ',' delimiter",
+  "done_reason": "stop",
+  "wall_ms": 2335.9,
+  "total_ms": 2334.7,
+  "load_ms": 1.8,
+  "prompt_eval_ms": 26.3,
+  "eval_ms": 2278.6,
+  "prompt_tokens": 929,
+  "completion_tokens": 602,
+  "created_at": "2026-11-03T14:57:45+00:00"
+}

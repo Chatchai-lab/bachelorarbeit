@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0001",
+  "doc_type": "vertrag",
+  "run_id": "20261103-1602_vorversuch2_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2027-1055\",\n  \"vertragsdatum\": \"2027-05-01\",\n  \"auftraggeber\": {\n    \"name\": \"Putz GbR\",\n    \"strasse\": \"Schäfergasse 155\",\n    \"plz\": \"77705\",\n    \"ort\": \"Backnang\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Eckbauer Kusch GbR\",\n    \"strasse\": \"Hermannweg 7\",\n    \"plz\": \"30622\",\n    \"ort\": \"Sonneberg\"\n  },\n  \"leistungsgegenstand\": \"IT-Wartung und Support\",\n  \"vertragsbeginn\": \"2027-05-01\",\n  \"laufzeit_monate\": \"12\",\n  \"vertragsende\": \"2028-04-30\",\n  \"kuendigungsfrist\": \"4 Wochen\",\n  \"verguetung_netto\": \"2.470,21 €\",\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"null\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2027-1055",
+    "vertragsdatum": "2027-05-01",
+    "auftraggeber": {
+      "name": "Putz GbR",
+      "strasse": "Schäfergasse 155",
+      "plz": "77705",
+      "ort": "Backnang"
+    },
+    "auftragnehmer": {
+      "name": "Eckbauer Kusch GbR",
+      "strasse": "Hermannweg 7",
+      "plz": "30622",
+      "ort": "Sonneberg"
+    },
+    "leistungsgegenstand": "IT-Wartung und Support",
+    "vertragsbeginn": "2027-05-01",
+    "laufzeit_monate": "12",
+    "vertragsende": "2028-04-30",
+    "kuendigungsfrist": "4 Wochen",
+    "verguetung_netto": "2.470,21 €",
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "null"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1253.6,
+  "total_ms": 1252.4,
+  "load_ms": 2.0,
+  "prompt_eval_ms": 95.6,
+  "eval_ms": 1126.2,
+  "prompt_tokens": 1304,
+  "completion_tokens": 283,
+  "created_at": "2026-11-03T15:04:13+00:00"
+}

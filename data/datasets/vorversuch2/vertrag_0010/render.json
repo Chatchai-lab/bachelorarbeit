@@ -1,0 +1,50 @@
+{
+  "paragraphen": [
+    [
+      "Vertragsgegenstand",
+      [
+        "Gegenstand dieses Vertrags sind Leistungen des Auftragnehmers im Bereich „Buchhaltung“ (nachfolgend „Leistungen“). Diese umfassen die laufende Finanzbuchhaltung des Auftraggebers einschließlich der Kontierung und Verbuchung der Belege, der monatlichen Umsatzsteuer-Voranmeldung und der Erstellung betriebswirtschaftlicher Auswertungen.",
+        "Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in Textform zugestimmt hat."
+      ]
+    ],
+    [
+      "Vertragsbeginn und Laufzeit",
+      [
+        "Das Vertragsverhältnis beginnt am 1. März 2025. Die feste Vertragslaufzeit beträgt 24 Monate und endet am 28. Februar 2027."
+      ]
+    ],
+    [
+      "Vergütung",
+      [
+        "Für die Leistungen erhält der Auftragnehmer eine monatliche Pauschale in Höhe von 1.226,69 € netto zuzüglich der gesetzlichen Umsatzsteuer.",
+        "Die Vergütung ist jeweils im Voraus bis zum dritten Werktag des Abrechnungszeitraums fällig.",
+        "Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach vorheriger Absprache gesondert vergütet."
+      ]
+    ],
+    [
+      "Kündigung",
+      [
+        "Beide Vertragsparteien sind berechtigt, diesen Vertrag unter Einhaltung einer Kündigungsfrist von einem Monat zum Monatsende in Textform zu kündigen.",
+        "Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+      ]
+    ],
+    [
+      "Vertraulichkeit",
+      [
+        "Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags fort."
+      ]
+    ],
+    [
+      "Schlussbestimmungen",
+      [
+        "Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Formerfordernisses.",
+        "Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+        "Gerichtsstand ist Badoberan."
+      ]
+    ]
+  ],
+  "vertragsdatum_text": "8. Januar 2025",
+  "unterzeichner_ag": "Ralf-Dieter Hoffmann",
+  "unterzeichner_an": "Reinhard Fischer B.Sc.",
+  "layout": "vertrag_a.html.j2"
+}

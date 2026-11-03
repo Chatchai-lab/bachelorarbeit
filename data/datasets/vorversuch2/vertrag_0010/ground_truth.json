@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2025-7488",
+  "vertragsdatum": "2025-01-08",
+  "auftraggeber": {
+    "name": "Drubin Kostolzin GmbH & Co. KGaA",
+    "strasse": "Karl-Josef-Weimer-Gasse 8/5",
+    "plz": "22695",
+    "ort": "Badoberan"
+  },
+  "auftragnehmer": {
+    "name": "Kraushaar GmbH",
+    "strasse": "Krausestraße 66",
+    "plz": "70784",
+    "ort": "Viechtach"
+  },
+  "leistungsgegenstand": "Buchhaltung",
+  "vertragsbeginn": "2025-03-01",
+  "laufzeit_monate": 24,
+  "vertragsende": "2027-02-28",
+  "kuendigungsfrist": "1 Monat zum Monatsende",
+  "verguetung_netto": 1226.69,
+  "verguetung_intervall": "monatlich",
+  "verlaengerung": null
+}
