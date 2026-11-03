@@ -86,8 +86,22 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
 
     think = False if model.startswith("qwen3") else None  # Qwen3: Denkmodus aus
 
-    # Aufwärmen: Modell in den GPU-Speicher laden, nicht protokolliert
-    oc.chat(model, [{"role": "user", "content": "Hallo"}], {**options, "num_predict": 1}, think=think)
+    def ollama_format_for(doc_type: str):
+        if fmt == "json":
+            return "json"
+        if fmt == "schema":
+            return json_schema(doc_type)
+        if fmt == "schema_text":
+            return text_schema(doc_type)
+        return None
+
+    # Aufwärmen mit vollständigen, echten Anfragen (je Dokumenttyp eine, nicht protokolliert).
+    # Ein Aufwärmen mit nur einem Token reicht nicht: Im Vorversuch war das erste gemessene
+    # Dokument sonst 3- bis 4-mal langsamer als alle folgenden.
+    for warm_type in sorted({d["doc_type"] for d in docs}):
+        warm_doc = next(d for d in docs if d["doc_type"] == warm_type)
+        oc.chat(model, build_messages(warm_type, warm_doc["text"]), options, fmt=ollama_format_for(warm_type), think=think)
+    print("Aufwärmen abgeschlossen", flush=True)
 
     (run_dir / "docs").mkdir(parents=True, exist_ok=True)
     (run_dir / "run.json").write_text(json.dumps(protocol, ensure_ascii=False, indent=2))
@@ -101,14 +115,7 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
             print(f"[{i}/{len(docs)}] {doc['doc_id']}: vorhanden, übersprungen", flush=True)
             continue
 
-        if fmt == "json":
-            ollama_format = "json"
-        elif fmt == "schema":
-            ollama_format = json_schema(doc["doc_type"])
-        elif fmt == "schema_text":
-            ollama_format = text_schema(doc["doc_type"])
-        else:
-            ollama_format = None
+        ollama_format = ollama_format_for(doc["doc_type"])
         messages = build_messages(doc["doc_type"], doc["text"])
         resp = oc.chat(model, messages, options, fmt=ollama_format, think=think)
         parsed, error = parse_model_output(resp["content"])
