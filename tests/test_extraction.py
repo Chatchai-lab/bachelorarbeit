@@ -46,3 +46,15 @@ def test_schema_hinweise_decken_ground_truth_ab():
 
 def test_prompt_hash_stabil():
     assert prompt_hash() == prompt_hash() and len(prompt_hash()) == 12
+
+
+def test_text_schema_feste_felder_nur_text():
+    from extraction.prompts import text_schema
+
+    s = text_schema("rechnung")
+    assert s["additionalProperties"] is False
+    assert set(s["required"]) == set(SCHEMA_HINWEISE["rechnung"])
+    assert s["properties"]["netto"] == {"type": ["string", "null"]}
+    pos = s["properties"]["positionen"]["items"]
+    assert pos["properties"]["menge"] == {"type": ["string", "null"]}
+    json.dumps(s)

@@ -1,9 +1,9 @@
 {
   "gesamt": {
     "felder": 446,
-    "halluziniert": 77,
-    "manuell_pruefen": 14,
-    "rate": 0.173
+    "halluziniert": 88,
+    "manuell_pruefen": 3,
+    "rate": 0.197
   },
   "je_dokumenttyp": {
     "rechnung": {
@@ -14,16 +14,16 @@
     },
     "vertrag": {
       "felder": 126,
-      "halluziniert": 16,
-      "manuell_pruefen": 14,
-      "rate": 0.127
+      "halluziniert": 27,
+      "manuell_pruefen": 3,
+      "rate": 0.214
     }
   },
   "je_fehlertyp": {
     "vertauscht": 51,
-    "erfunden": 12,
-    "verfaelscht": 11,
-    "format_schema": 3
+    "verfaelscht": 19,
+    "format_schema": 10,
+    "erfunden": 8
   },
   "je_feld": {
     "rechnung:bic": {
@@ -196,9 +196,9 @@
     },
     "vertrag:kuendigungsfrist": {
       "felder": 7,
-      "halluziniert": 0,
-      "manuell_pruefen": 7,
-      "rate": 0.0
+      "halluziniert": 4,
+      "manuell_pruefen": 3,
+      "rate": 0.571
     },
     "vertrag:laufzeit_monate": {
       "felder": 7,
@@ -226,9 +226,9 @@
     },
     "vertrag:verlaengerung": {
       "felder": 7,
-      "halluziniert": 0,
-      "manuell_pruefen": 7,
-      "rate": 0.0
+      "halluziniert": 7,
+      "manuell_pruefen": 0,
+      "rate": 1.0
     },
     "vertrag:vertragsbeginn": {
       "felder": 7,

@@ -103,6 +103,33 @@ def json_schema(doc_type: str) -> dict:
     return schema
 
 
+def text_schema(doc_type: str) -> dict:
+    """Schema mit festen Feldnamen, aber Text als Werttyp ("schema_text").
+
+    Die Feldnamen und ihre Reihenfolge sind vorgegeben, dadurch sind
+    Wiederholungsschleifen und erfundene Felder ausgeschlossen und das JSON
+    wird immer vollständig geschlossen. Werte bleiben frei formulierter Text
+    (oder null), es gibt also keinen Zwang, deutsche Zahlen- und Datumsformate
+    umzuwandeln. Die Normalisierung übernimmt das Labeling.
+    """
+
+    def leaf() -> dict:
+        return {"type": ["string", "null"]}
+
+    def obj(hints: dict) -> dict:
+        props = {}
+        for key, hint in hints.items():
+            if isinstance(hint, dict):
+                props[key] = obj(hint)
+            elif isinstance(hint, list):
+                props[key] = {"type": "array", "items": obj(hint[0])}
+            else:
+                props[key] = leaf()
+        return {"type": "object", "properties": props, "required": list(props), "additionalProperties": False}
+
+    return obj(SCHEMA_HINWEISE[doc_type])
+
+
 def prompt_hash() -> str:
     material = json.dumps([SYSTEM, USER_TEMPLATE, SCHEMA_HINWEISE], ensure_ascii=False, sort_keys=True)
     return hashlib.sha256(material.encode()).hexdigest()[:12]

@@ -60,3 +60,14 @@ def test_zusaetzliche_position_ist_erfunden():
     extra = {"beschreibung": "Anfahrt", "menge": 1, "einheit": "Pauschale", "einzelpreis": 50, "gesamtpreis": 50}
     labs = _labels(positionen=GT["positionen"] + [extra])
     assert labs["positionen[2]"].fehlertyp == "erfunden"
+
+
+def test_null_als_text_ist_leer():
+    labs = _labels(iban="null", bic="")
+    assert labs["iban"].status == "korrekt" and labs["bic"].status == "korrekt"
+
+
+def test_frist_ohne_zeitpunkt_ist_unvollstaendig():
+    gt = {"vertragsnummer": "DV-1", "kuendigungsfrist": "4 Wochen zum Monatsende"}
+    labs = {x.field: x for x in label_document("r", "d", "vertrag", gt, {**gt, "kuendigungsfrist": "4 Wochen"}, "")}
+    assert labs["kuendigungsfrist"].fehlertyp == "verfaelscht"

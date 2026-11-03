@@ -57,7 +57,7 @@ app = modal.App("ba-extraktion", image=image)
 def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, protocol: dict) -> dict:
     from extraction import ollama_client as oc
     from extraction.parsing import parse_model_output
-    from extraction.prompts import build_messages, json_schema
+    from extraction.prompts import build_messages, json_schema, text_schema
 
     from common.hardware import check_gpu
 
@@ -105,6 +105,8 @@ def extract(run_id: str, model: str, docs: list[dict], options: dict, fmt: str, 
             ollama_format = "json"
         elif fmt == "schema":
             ollama_format = json_schema(doc["doc_type"])
+        elif fmt == "schema_text":
+            ollama_format = text_schema(doc["doc_type"])
         else:
             ollama_format = None
         messages = build_messages(doc["doc_type"], doc["text"])
@@ -174,11 +176,12 @@ def main(
     num_predict: int = 1024,
     run_id: str = "",
 ):
-    """fmt: none (freie Antwort), json (Ollama-JSON-Modus) oder schema (schemagebunden)."""
+    """fmt: none (freie Antwort), json (Ollama-JSON-Modus), schema (schemagebunden mit
+    Datentypen) oder schema_text (feste Feldnamen, alle Werte als Text)."""
     from extraction.prompts import PROMPT_VERSION, prompt_hash
 
-    if fmt not in ("none", "json", "schema"):
-        raise SystemExit("--fmt muss none, json oder schema sein")
+    if fmt not in ("none", "json", "schema", "schema_text"):
+        raise SystemExit("--fmt muss none, json, schema oder schema_text sein")
 
     ds = Path(dataset)
     manifest = json.loads((ds / "manifest.json").read_text(encoding="utf-8"))

@@ -93,9 +93,12 @@ def _flatten(spec, gt, ext, prefix=""):
             yield name, kind, g, e
 
 
+_LEER = {"null", "none", "n/a", "na", "-", "keine", "nicht angegeben", "nicht vorhanden"}
+
+
 def _normalize(kind, v):
     """-> (normierter Wert, interpretierbar?)"""
-    if v is None or v is _MISSING:
+    if v is None or v is _MISSING or (isinstance(v, str) and (N.text(v) or "") in _LEER | {""}):
         return None, True
     if kind == "number":
         n = N.number(v)
@@ -170,7 +173,9 @@ def label_document(run_id, doc_id, doc_type, gt: dict, parsed: dict | None, doc_
         en, ok = _normalize(kind, e)
 
         if not ok:
-            if kind in ("frist", "verl", "intervall"):
+            if kind == "frist" and gn and N._dauer(N.text(e) or "") == gn[:2]:
+                lab.status, lab.fehlertyp, lab.detail = "halluziniert", "verfaelscht", "unvollständig (Zeitpunkt fehlt)"
+            elif kind in ("frist", "verl", "intervall"):
                 lab.status, lab.detail = "manuell_pruefen", "nicht automatisch interpretierbar"
             else:
                 lab.status, lab.fehlertyp, lab.detail = "halluziniert", "format_schema", "nicht interpretierbar"
@@ -197,6 +202,8 @@ def label_document(run_id, doc_id, doc_type, gt: dict, parsed: dict | None, doc_
                 lab.fehlertyp, lab.detail = "vertauscht", f"Wert gehört zu {andere[0]}"
             elif _in_doc(kind, en, doc):
                 lab.fehlertyp, lab.detail = "vertauscht", "Wert steht an anderer Stelle im Dokument"
+            elif kind in ("frist", "verl", "intervall"):
+                lab.fehlertyp, lab.detail = "verfaelscht", "anderer Wert als im Dokument"
             elif name in DERIVED or leaf in DERIVED_SUFFIX:
                 lab.fehlertyp, lab.detail = "rechen_logik", "berechneter Wert falsch"
             elif _similar(gn, en):

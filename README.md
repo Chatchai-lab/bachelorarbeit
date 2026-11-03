@@ -85,7 +85,7 @@ pytest             # alle Tests sollten durchlaufen
 | `--doc-type`    | `all`         | `rechnung` oder `vertrag`                                     |
 | `--temperature` | `0`           | Hauptlauf 0, Stabilitätstest 0.7                              |
 | `--seed`        | `42`          |                                                               |
-| `--fmt`         | `none`        | `json` (JSON-Modus) oder `schema` (Structured Output)         |
+| `--fmt`         | `none`        | `json` (JSON-Modus), `schema` (Structured Output mit Datentypen) oder `schema_text` (feste Felder, Werte als Text) |
 | `--num-predict` | `1024`        | maximale Antwortlänge in Tokens (vollständige Antwort ca. 500) |
 | `--run-id`      | automatisch   | gleiche ID erneut starten = Wiederaufnahme nach Abbruch      |
 
