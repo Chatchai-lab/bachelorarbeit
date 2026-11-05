@@ -1,0 +1,7 @@
+{
+  "branche": "Catering",
+  "kundennummer": "KD-27723",
+  "telefon": "04229 69978",
+  "ansprechpartner": "Antonios Hendriks",
+  "layout": "rechnung_a.html.j2"
+}

@@ -1,0 +1,51 @@
+Dienstleistungsvertrag
+Vertragsnummer: DV-2025-8769
+zwischen
+Säuberlich AG & Co. OHG
+Petros-Karge-Allee 951, 88044 Bitterfeld
+– nachfolgend „Auftraggeber“ –
+und
+Heinrich Lindau OHG mbH
+Arne-Fliegner-Platz 8-4, 77598 Borna
+– nachfolgend „Auftragnehmer“ –
+wird folgender Vertrag geschlossen:
+§ 1 Vertragsgegenstand
+(1) Gegenstand dieses Vertrags sind Leistungen des Auftragnehmers im Bereich „IT-
+Wartung und Support“ (nachfolgend „Leistungen“). Diese umfassen die laufende Wartung
+der IT-Infrastruktur des Auftraggebers, insbesondere der Server, Netzwerkkomponenten
+und Arbeitsplatzrechner, sowie einen telefonischen Support an Werktagen von 8 bis 17
+Uhr.
+(2) Der Auftragnehmer erbringt die Leistungen eigenverantwortlich und mit qualifiziertem
+Personal. Er ist berechtigt, Subunternehmer einzusetzen, sofern der Auftraggeber zuvor in
+Textform zugestimmt hat.
+§ 2 Vertragsbeginn und Laufzeit
+(1) Das Vertragsverhältnis beginnt am 1. Dezember 2025. Die feste Vertragslaufzeit
+beträgt zwölf Monate und endet am 30. November 2026.
+§ 3 Vergütung
+(1) Für die Leistungen erhält der Auftragnehmer eine monatliche Pauschale in Höhe von
+1.129,64 € netto zuzüglich der gesetzlichen Umsatzsteuer.
+(2) Die Vergütung ist jeweils im Voraus bis zum dritten Werktag des
+Abrechnungszeitraums fällig.
+(3) Zusätzliche Leistungen, die über den Vertragsgegenstand hinausgehen, werden nach
+vorheriger Absprache gesondert vergütet.
+§ 4 Kündigung
+(1) Der Vertrag kann von jeder Partei mit einer Frist von vier Wochen zum Monatsende
+schriftlich gekündigt werden.
+(2) Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.
+§ 5 Vertragsverlängerung
+(1) Erfolgt keine fristgerechte Kündigung, verlängert sich die Vertragslaufzeit
+stillschweigend um jeweils zwölf Monate.
+
+§ 6 Vertraulichkeit
+(1) Die Parteien verpflichten sich, alle im Rahmen dieses Vertrags erlangten vertraulichen
+Informationen geheim zu halten. Diese Pflicht besteht auch nach Beendigung des Vertrags
+fort.
+§ 7 Schlussbestimmungen
+(1) Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch
+für die Aufhebung dieses Formerfordernisses.
+(2) Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die Wirksamkeit der
+übrigen Bestimmungen unberührt.
+(3) Gerichtsstand ist Bitterfeld.
+Bitterfeld, den 14.10.2025
+Eugenie Pergande B.Eng. Jovan Weihmann-Vollbrecht
+für den Auftraggeber für den Auftragnehmer

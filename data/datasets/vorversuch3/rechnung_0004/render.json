@@ -1,0 +1,7 @@
+{
+  "branche": "Handwerk",
+  "kundennummer": "KD-83034",
+  "telefon": "+49 (0) 3472 702901",
+  "ansprechpartner": "Klaus-Jürgen Christoph",
+  "layout": "rechnung_a.html.j2"
+}

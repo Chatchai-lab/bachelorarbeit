@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2026-3409",
+  "vertragsdatum": "2026-01-10",
+  "auftraggeber": {
+    "name": "Klingelhöfer Meyer GmbH & Co. KGaA",
+    "strasse": "Schwitalweg 0",
+    "plz": "33532",
+    "ort": "Meiningen"
+  },
+  "auftragnehmer": {
+    "name": "Zahn Rosemann GmbH",
+    "strasse": "Curt-Misicher-Straße 504",
+    "plz": "05206",
+    "ort": "Schwerin"
+  },
+  "leistungsgegenstand": "Webhosting und Betreuung",
+  "vertragsbeginn": "2026-03-01",
+  "laufzeit_monate": 12,
+  "vertragsende": "2027-02-28",
+  "kuendigungsfrist": "1 Monat zum Monatsende",
+  "verguetung_netto": 1477.24,
+  "verguetung_intervall": "vierteljährlich",
+  "verlaengerung": "automatisch um 6 Monate"
+}

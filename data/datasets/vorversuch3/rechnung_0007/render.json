@@ -1,0 +1,7 @@
+{
+  "branche": "Catering",
+  "kundennummer": "KD-40346",
+  "telefon": "+49(0)4089106620",
+  "ansprechpartner": "Raphaela Wulff-Franke",
+  "layout": "rechnung_a.html.j2"
+}

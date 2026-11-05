@@ -1,0 +1,64 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2603-292",
+  "rechnungsdatum": "2026-03-23",
+  "leistungsdatum": "2026-03-06",
+  "lieferant": {
+    "name": "Zänker GmbH & Co. KG",
+    "strasse": "Drewesweg 9",
+    "plz": "47986",
+    "ort": "Schlüchtern"
+  },
+  "lieferant_ust_id": "DE648121165",
+  "kunde": {
+    "name": "Fliegner Hande AG",
+    "strasse": "Striebitzstr. 23/40",
+    "plz": "98746",
+    "ort": "Wurzen"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Einrichtung Arbeitsplatzrechner",
+      "menge": 3.0,
+      "einheit": "Stück",
+      "einzelpreis": 88.74,
+      "gesamtpreis": 266.22
+    },
+    {
+      "beschreibung": "Softwareentwicklung (Backend)",
+      "menge": 24.0,
+      "einheit": "Std.",
+      "einzelpreis": 113.46,
+      "gesamtpreis": 2723.04
+    },
+    {
+      "beschreibung": "Lizenz Projektmanagement-Software (12 Monate)",
+      "menge": 15.0,
+      "einheit": "Lizenz",
+      "einzelpreis": 121.68,
+      "gesamtpreis": 1825.2
+    },
+    {
+      "beschreibung": "Wartung Serverinfrastruktur",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 349.87,
+      "gesamtpreis": 349.87
+    },
+    {
+      "beschreibung": "Schulung Datenschutz für Mitarbeitende",
+      "menge": 1.0,
+      "einheit": "Tag",
+      "einzelpreis": 1181.26,
+      "gesamtpreis": 1181.26
+    }
+  ],
+  "netto": 6345.59,
+  "ust_satz": 19,
+  "ust_betrag": 1205.66,
+  "brutto": 7551.25,
+  "zahlungsziel_tage": 7,
+  "bestellnummer": "4580763640",
+  "iban": "DE30600501010418996254",
+  "bic": "SOLADEST600"
+}

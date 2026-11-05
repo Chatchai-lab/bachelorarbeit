@@ -1,0 +1,50 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2512-165",
+  "rechnungsdatum": "2025-12-27",
+  "leistungsdatum": "2025-12-17",
+  "lieferant": {
+    "name": "Kitzmann Junken Stiftung & Co. KGaA",
+    "strasse": "Wilmsplatz 2",
+    "plz": "45777",
+    "ort": "Reutlingen"
+  },
+  "lieferant_ust_id": "DE777398785",
+  "kunde": {
+    "name": "Hornich AG",
+    "strasse": "Mitschkeplatz 47-97",
+    "plz": "85982",
+    "ort": "Eisleben"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Anfahrtspauschale",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 44.68,
+      "gesamtpreis": 44.68
+    },
+    {
+      "beschreibung": "Arbeitszeit Elektroinstallation",
+      "menge": 6.0,
+      "einheit": "Std.",
+      "einzelpreis": 68.16,
+      "gesamtpreis": 408.96
+    },
+    {
+      "beschreibung": "Arbeitszeit Geselle",
+      "menge": 4.0,
+      "einheit": "Std.",
+      "einzelpreis": 61.64,
+      "gesamtpreis": 246.56
+    }
+  ],
+  "netto": 700.2,
+  "ust_satz": 19,
+  "ust_betrag": 133.04,
+  "brutto": 833.24,
+  "zahlungsziel_tage": 30,
+  "bestellnummer": null,
+  "iban": "DE38500700104785422230",
+  "bic": "DEUTDEFFXXX"
+}

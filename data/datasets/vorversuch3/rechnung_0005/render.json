@@ -1,0 +1,7 @@
+{
+  "branche": "Handwerk",
+  "kundennummer": "KD-60109",
+  "telefon": "+49(0)3845978296",
+  "ansprechpartner": "Falko Renner B.Sc.",
+  "layout": "rechnung_a.html.j2"
+}

@@ -1,0 +1,36 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2505-916",
+  "rechnungsdatum": "2025-05-25",
+  "leistungsdatum": "2025-05-19",
+  "lieferant": {
+    "name": "Ullmann e.V.",
+    "strasse": "Harold-Ditschlerin-Weg 428",
+    "plz": "17853",
+    "ort": "Griesbach Rottal"
+  },
+  "lieferant_ust_id": "DE178530478",
+  "kunde": {
+    "name": "Oestrovsky",
+    "strasse": "Ditschleringasse 7625",
+    "plz": "95609",
+    "ort": "Kassel"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Whiteboard 120 x 90 cm",
+      "menge": 1.0,
+      "einheit": "Stück",
+      "einzelpreis": 124.84,
+      "gesamtpreis": 124.84
+    }
+  ],
+  "netto": 124.84,
+  "ust_satz": 19,
+  "ust_betrag": 23.72,
+  "brutto": 148.56,
+  "zahlungsziel_tage": 30,
+  "bestellnummer": "PO-2026-3114",
+  "iban": null,
+  "bic": null
+}

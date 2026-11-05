@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2025-8769",
+  "vertragsdatum": "2025-10-14",
+  "auftraggeber": {
+    "name": "Säuberlich AG & Co. OHG",
+    "strasse": "Petros-Karge-Allee 951",
+    "plz": "88044",
+    "ort": "Bitterfeld"
+  },
+  "auftragnehmer": {
+    "name": "Heinrich Lindau OHG mbH",
+    "strasse": "Arne-Fliegner-Platz 8-4",
+    "plz": "77598",
+    "ort": "Borna"
+  },
+  "leistungsgegenstand": "IT-Wartung und Support",
+  "vertragsbeginn": "2025-12-01",
+  "laufzeit_monate": 12,
+  "vertragsende": "2026-11-30",
+  "kuendigungsfrist": "4 Wochen zum Monatsende",
+  "verguetung_netto": 1129.64,
+  "verguetung_intervall": "monatlich",
+  "verlaengerung": "automatisch um 12 Monate"
+}

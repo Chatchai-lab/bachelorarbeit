@@ -1,0 +1,7 @@
+{
+  "branche": "Handwerk",
+  "kundennummer": "KD-31562",
+  "telefon": "+49(0)3491 95876",
+  "ansprechpartner": "Henrike Wende",
+  "layout": "rechnung_a.html.j2"
+}

@@ -1,0 +1,67 @@
+{
+  "doc_id": "rechnung_0002",
+  "doc_type": "rechnung",
+  "run_id": "20261103-1714_vorversuch3_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"2507-970\",\n  \"rechnungsdatum\": \"2025-07-27\",\n  \"leistungsdatum\": \"2025-07-27\",\n  \"lieferant\": {\n    \"name\": \"Tschentscher Gutknecht AG\",\n    \"strasse\": \"Faustallee 667\",\n    \"plz\": \"67879\",\n    \"ort\": \"Hainichen\"\n  },\n  \"lieferant_ust_id\": \"DE188964022\",\n  \"kunde\": {\n    \"name\": \"Steuer GmbH & Co. KG\",\n    \"strasse\": \"Imke-Preiß-Weg 5-1\",\n    \"plz\": \"22299\",\n    \"ort\": \"Hofgeismar\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Kaffee- und Getränkepauschale, je Person\",\n      \"menge\": \"40\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"7.67\",\n      \"gesamtpreis\": \"306.80\"\n    },\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": \"25\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"20.61\",\n      \"gesamtpreis\": \"515.25\"\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete\",\n      \"menge\": \"1\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"137.96\",\n      \"gesamtpreis\": \"137.96\"\n    }\n  ],\n  \"netto\": \"960.01\",\n  \"ust_satz\": \"19\",\n  \"ust_betrag\": \"182.40\",\n  \"brutto\": \"1142.41\",\n  \"zahlungsziel_tage\": \"14\",\n  \"bestellnummer\": \"4525010403\",\n  \"iban\": \"DE60 7605 0101 7796 0144 72\",\n  \"bic\": \"SSKNDE77XXX\"\n}",
+  "parsed": {
+    "rechnungsnummer": "2507-970",
+    "rechnungsdatum": "2025-07-27",
+    "leistungsdatum": "2025-07-27",
+    "lieferant": {
+      "name": "Tschentscher Gutknecht AG",
+      "strasse": "Faustallee 667",
+      "plz": "67879",
+      "ort": "Hainichen"
+    },
+    "lieferant_ust_id": "DE188964022",
+    "kunde": {
+      "name": "Steuer GmbH & Co. KG",
+      "strasse": "Imke-Preiß-Weg 5-1",
+      "plz": "22299",
+      "ort": "Hofgeismar"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Kaffee- und Getränkepauschale, je Person",
+        "menge": "40",
+        "einheit": "Person",
+        "einzelpreis": "7.67",
+        "gesamtpreis": "306.80"
+      },
+      {
+        "beschreibung": "Mittagsbuffet, je Person",
+        "menge": "25",
+        "einheit": "Person",
+        "einzelpreis": "20.61",
+        "gesamtpreis": "515.25"
+      },
+      {
+        "beschreibung": "Geschirr- und Besteckmiete",
+        "menge": "1",
+        "einheit": "Pauschale",
+        "einzelpreis": "137.96",
+        "gesamtpreis": "137.96"
+      }
+    ],
+    "netto": "960.01",
+    "ust_satz": "19",
+    "ust_betrag": "182.40",
+    "brutto": "1142.41",
+    "zahlungsziel_tage": "14",
+    "bestellnummer": "4525010403",
+    "iban": "DE60 7605 0101 7796 0144 72",
+    "bic": "SSKNDE77XXX"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 2177.4,
+  "total_ms": 2176.0,
+  "load_ms": 1.6,
+  "prompt_eval_ms": 37.7,
+  "eval_ms": 2124.1,
+  "prompt_tokens": 981,
+  "completion_tokens": 544,
+  "created_at": "2026-11-03T16:15:45+00:00"
+}

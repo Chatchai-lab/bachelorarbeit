@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": "DV-2025-8168",
+  "vertragsdatum": "2025-03-07",
+  "auftraggeber": {
+    "name": "Nerger",
+    "strasse": "Norma-Dippel-Ring 9817",
+    "plz": "51367",
+    "ort": "Perleberg"
+  },
+  "auftragnehmer": {
+    "name": "Weller AG & Co. KGaA",
+    "strasse": "Freia-Schuchhardt-Weg 33-83",
+    "plz": "66498",
+    "ort": "Staßfurt"
+  },
+  "leistungsgegenstand": "Winterdienst",
+  "vertragsbeginn": "2025-04-01",
+  "laufzeit_monate": 12,
+  "vertragsende": "2026-03-31",
+  "kuendigungsfrist": "3 Monate zum Quartalsende",
+  "verguetung_netto": 1699.22,
+  "verguetung_intervall": "monatlich",
+  "verlaengerung": null
+}

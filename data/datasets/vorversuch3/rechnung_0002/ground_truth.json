@@ -1,0 +1,50 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2507-970",
+  "rechnungsdatum": "2025-07-27",
+  "leistungsdatum": "2025-07-27",
+  "lieferant": {
+    "name": "Tschentscher Gutknecht AG",
+    "strasse": "Faustallee 667",
+    "plz": "67879",
+    "ort": "Hainichen"
+  },
+  "lieferant_ust_id": "DE188964022",
+  "kunde": {
+    "name": "Steuer GmbH & Co. KG",
+    "strasse": "Imke-Preiß-Weg 5-1",
+    "plz": "22299",
+    "ort": "Hofgeismar"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Kaffee- und Getränkepauschale, je Person",
+      "menge": 40.0,
+      "einheit": "Person",
+      "einzelpreis": 7.67,
+      "gesamtpreis": 306.8
+    },
+    {
+      "beschreibung": "Mittagsbuffet, je Person",
+      "menge": 25.0,
+      "einheit": "Person",
+      "einzelpreis": 20.61,
+      "gesamtpreis": 515.25
+    },
+    {
+      "beschreibung": "Geschirr- und Besteckmiete",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 137.96,
+      "gesamtpreis": 137.96
+    }
+  ],
+  "netto": 960.01,
+  "ust_satz": 19,
+  "ust_betrag": 182.4,
+  "brutto": 1142.41,
+  "zahlungsziel_tage": 14,
+  "bestellnummer": "4525010403",
+  "iban": "DE60760501017796014472",
+  "bic": "SSKNDE77XXX"
+}

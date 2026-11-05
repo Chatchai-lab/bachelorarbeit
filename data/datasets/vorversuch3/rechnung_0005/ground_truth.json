@@ -1,0 +1,36 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2503-623",
+  "rechnungsdatum": "2025-03-28",
+  "leistungsdatum": "2025-03-16",
+  "lieferant": {
+    "name": "Caspar Kohl AG",
+    "strasse": "Annelene-Ullrich-Ring 88/91",
+    "plz": "92839",
+    "ort": "Genthin"
+  },
+  "lieferant_ust_id": "DE283913674",
+  "kunde": {
+    "name": "Ortmann Trapp GmbH",
+    "strasse": "Ralf-Peter-Rosemann-Platz 3",
+    "plz": "16803",
+    "ort": "Hohenstein-Ernstthal"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Arbeitszeit Elektroinstallation",
+      "menge": 8.0,
+      "einheit": "Std.",
+      "einzelpreis": 76.74,
+      "gesamtpreis": 613.92
+    }
+  ],
+  "netto": 613.92,
+  "ust_satz": 19,
+  "ust_betrag": 116.64,
+  "brutto": 730.56,
+  "zahlungsziel_tage": 14,
+  "bestellnummer": "B67427",
+  "iban": "DE44600501019091501192",
+  "bic": "SOLADEST600"
+}

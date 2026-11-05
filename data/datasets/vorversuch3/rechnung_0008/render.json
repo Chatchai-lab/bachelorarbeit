@@ -1,0 +1,7 @@
+{
+  "branche": "IT-Dienstleistungen",
+  "kundennummer": "KD-30560",
+  "telefon": "+49(0)5559 58500",
+  "ansprechpartner": "Inga Trubin MBA.",
+  "layout": "rechnung_a.html.j2"
+}

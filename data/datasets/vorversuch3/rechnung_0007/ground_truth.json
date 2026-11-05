@@ -1,0 +1,50 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "R251633",
+  "rechnungsdatum": "2025-08-05",
+  "leistungsdatum": "2025-07-15",
+  "lieferant": {
+    "name": "Thanel",
+    "strasse": "Netteplatz 10/13",
+    "plz": "58721",
+    "ort": "Dinslaken"
+  },
+  "lieferant_ust_id": "DE618153123",
+  "kunde": {
+    "name": "Kroker",
+    "strasse": "Trudel-Steinberg-Allee 45",
+    "plz": "23934",
+    "ort": "Hoyerswerda"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Mittagsbuffet, je Person",
+      "menge": 12.0,
+      "einheit": "Person",
+      "einzelpreis": 18.64,
+      "gesamtpreis": 223.68
+    },
+    {
+      "beschreibung": "Servicepersonal",
+      "menge": 4.0,
+      "einheit": "Std.",
+      "einzelpreis": 36.68,
+      "gesamtpreis": 146.72
+    },
+    {
+      "beschreibung": "Geschirr- und Besteckmiete",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 72.81,
+      "gesamtpreis": 72.81
+    }
+  ],
+  "netto": 443.21,
+  "ust_satz": 7,
+  "ust_betrag": 31.02,
+  "brutto": 474.23,
+  "zahlungsziel_tage": 30,
+  "bestellnummer": null,
+  "iban": null,
+  "bic": null
+}

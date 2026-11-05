@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 20mm 20mm 22mm 22mm; }
+body { font-family: &#34;DejaVu Sans&#34;, &#34;Liberation Sans&#34;, Arial, sans-serif; font-size: 9.5pt; color: #111; line-height: 1.4; }
+h1 { font-size: 15pt; margin: 0 0 4mm 0; }
+h2 { font-size: 10.5pt; margin: 5mm 0 1.5mm 0; }
+p { margin: 0 0 2mm 0; }
+.small { font-size: 7.5pt; color: #444; }
+.right { text-align: right; }
+table { border-collapse: collapse; width: 100%; }
+
+/* Briefkopf über der Anschrift, nicht daneben: sonst vermischt die
+   Textextraktion die Zeilen beider Blöcke */
+.briefkopf { text-align: right; margin-bottom: 6mm; }
+.briefkopf strong { font-size: 12pt; }
+.anschrift { width: 85mm; margin-bottom: 10mm; }
+.absender { font-size: 7.5pt; color: #444; border-bottom: 0.5pt solid #888; margin-bottom: 2mm; }
+.infos td { padding: 0.5mm 0 0.5mm 4mm; }
+.pos th { border-bottom: 1pt solid #111; text-align: left; padding: 1.5mm 1mm; }
+.pos td { border-bottom: 0.4pt solid #ccc; padding: 1.5mm 1mm; vertical-align: top; }
+.pos .num { text-align: right; white-space: nowrap; }
+.summen { width: 75mm; margin-left: auto; margin-top: 4mm; }
+.summen td { padding: 1mm; }
+.summen tr.brutto td { border-top: 1pt solid #111; font-weight: bold; }
+.fuss { margin-top: 14mm; border-top: 0.5pt solid #888; padding-top: 2mm; display: flex; gap: 10mm; }
+</style>
+</head>
+<body>
+<div class="briefkopf">
+  <strong>Pergande Junck GmbH &amp; Co. KG</strong><br>
+  Kitzmannweg 9/1<br>
+  65890 Artern<br>
+  Tel. +49(0)3491 95876
+</div>
+<div class="anschrift">
+  <div class="absender">Pergande Junck GmbH &amp; Co. KG · Kitzmannweg 9/1 · 65890 Artern</div>
+  Krause Gieß AG<br>
+  Roskothallee 5<br>
+  44829 Marktheidenfeld
+</div>
+
+<h1>Rechnung</h1>
+<table class="infos" style="width:auto; margin-bottom: 6mm;">
+  <tr><td style="padding-left:0">Rechnungsnummer:</td><td>2026/0176</td></tr>
+  <tr><td style="padding-left:0">Rechnungsdatum:</td><td>07.06.2026</td></tr>
+  <tr><td style="padding-left:0">Leistungsdatum:</td><td>28.05.2026</td></tr>
+  <tr><td style="padding-left:0">Kundennummer:</td><td>KD-31562</td></tr>
+  <tr><td style="padding-left:0">Ihre Bestellnummer:</td><td>4551797489</td></tr>
+  <tr><td style="padding-left:0">Ansprechpartner:</td><td>Henrike Wende</td></tr>
+</table>
+
+<p>Sehr geehrte Damen und Herren,<br>für unsere Leistungen erlauben wir uns, Ihnen Folgendes in Rechnung zu stellen:</p>
+
+<table class="pos">
+  <tr><th>Pos.</th><th>Beschreibung</th><th class="num">Menge</th><th>Einheit</th><th class="num">Einzelpreis</th><th class="num">Gesamt</th></tr>
+  
+  <tr>
+    <td>1</td>
+    <td>Steckdosenleiste Unterputz, 3-fach</td>
+    <td class="num">2</td>
+    <td>Stück</td>
+    <td class="num">26,06 €</td>
+    <td class="num">52,12 €</td>
+  </tr>
+  
+  <tr>
+    <td>2</td>
+    <td>Arbeitszeit Geselle</td>
+    <td class="num">6</td>
+    <td>Std.</td>
+    <td class="num">57,74 €</td>
+    <td class="num">346,44 €</td>
+  </tr>
+  
+  <tr>
+    <td>3</td>
+    <td>Installationsmaterial</td>
+    <td class="num">1</td>
+    <td>Pauschale</td>
+    <td class="num">157,73 €</td>
+    <td class="num">157,73 €</td>
+  </tr>
+  
+  <tr>
+    <td>4</td>
+    <td>LED-Panel 60 x 60 cm</td>
+    <td class="num">8</td>
+    <td>Stück</td>
+    <td class="num">88,27 €</td>
+    <td class="num">706,16 €</td>
+  </tr>
+  
+</table>
+
+<table class="summen">
+  <tr><td>Nettobetrag</td><td class="right">1.262,45 €</td></tr>
+  <tr><td>zzgl. 19 % USt.</td><td class="right">239,87 €</td></tr>
+  <tr class="brutto"><td>Rechnungsbetrag</td><td class="right">1.502,32 €</td></tr>
+</table>
+
+<p style="margin-top:6mm">
+Bitte überweisen Sie den Rechnungsbetrag innerhalb von 30 Tagen ohne Abzug auf das unten angegebene Konto.
+
+Bitte geben Sie bei Zahlung die Rechnungsnummer an.</p>
+<p>Mit freundlichen Grüßen<br>Pergande Junck GmbH &amp; Co. KG</p>
+
+<div class="fuss small">
+  <div>Pergande Junck GmbH &amp; Co. KG<br>Kitzmannweg 9/1<br>65890 Artern</div>
+  <div>USt-IdNr.: DE499905244</div>
+  <div>IBAN: DE04 1001 0010 1310 2324 42<br>BIC: PBNKDEFFXXX</div>
+</div>
+</body>
+</html>

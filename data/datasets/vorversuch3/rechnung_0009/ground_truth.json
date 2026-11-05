@@ -1,0 +1,57 @@
+{
+  "dokument_typ": "rechnung",
+  "rechnungsnummer": "2507-349",
+  "rechnungsdatum": "2025-07-23",
+  "leistungsdatum": "2025-07-18",
+  "lieferant": {
+    "name": "Reichmann Reinhardt AG & Co. OHG",
+    "strasse": "Hilde-Ortmann-Platz 49",
+    "plz": "55340",
+    "ort": "Göttingen"
+  },
+  "lieferant_ust_id": "DE330917032",
+  "kunde": {
+    "name": "Oestrovsky Hornig AG",
+    "strasse": "Wilmsenallee 1/8",
+    "plz": "33091",
+    "ort": "Beilngries"
+  },
+  "positionen": [
+    {
+      "beschreibung": "Kaffee- und Getränkepauschale, je Person",
+      "menge": 25.0,
+      "einheit": "Person",
+      "einzelpreis": 6.36,
+      "gesamtpreis": 159.0
+    },
+    {
+      "beschreibung": "Mittagsbuffet, je Person",
+      "menge": 20.0,
+      "einheit": "Person",
+      "einzelpreis": 30.88,
+      "gesamtpreis": 617.6
+    },
+    {
+      "beschreibung": "Servicepersonal",
+      "menge": 4.0,
+      "einheit": "Std.",
+      "einzelpreis": 33.46,
+      "gesamtpreis": 133.84
+    },
+    {
+      "beschreibung": "Geschirr- und Besteckmiete",
+      "menge": 1.0,
+      "einheit": "Pauschale",
+      "einzelpreis": 104.79,
+      "gesamtpreis": 104.79
+    }
+  ],
+  "netto": 1015.23,
+  "ust_satz": 19,
+  "ust_betrag": 192.89,
+  "brutto": 1208.12,
+  "zahlungsziel_tage": 30,
+  "bestellnummer": null,
+  "iban": "DE25200505501321835072",
+  "bic": "HASPDEHHXXX"
+}

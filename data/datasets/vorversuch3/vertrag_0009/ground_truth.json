@@ -1,0 +1,25 @@
+{
+  "dokument_typ": "vertrag",
+  "vertragsnummer": null,
+  "vertragsdatum": "2025-10-03",
+  "auftraggeber": {
+    "name": "Misicher",
+    "strasse": "Mahmoud-Kallert-Weg 9-3",
+    "plz": "43759",
+    "ort": "Schmölln"
+  },
+  "auftragnehmer": {
+    "name": "Schaaf GmbH",
+    "strasse": "Dimitri-Ring-Straße 6-3",
+    "plz": "15025",
+    "ort": "Naila"
+  },
+  "leistungsgegenstand": "Datenschutzbeauftragter",
+  "vertragsbeginn": "2025-12-01",
+  "laufzeit_monate": 36,
+  "vertragsende": "2028-11-30",
+  "kuendigungsfrist": "3 Monate zum Monatsende",
+  "verguetung_netto": 4811.02,
+  "verguetung_intervall": "jährlich",
+  "verlaengerung": "automatisch um 12 Monate"
+}
