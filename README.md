@@ -73,6 +73,9 @@ pytest             # alle Tests sollten durchlaufen
    ```
 
    Schreibt `labels.jsonl` (ein Eintrag je Feld) und `labels_summary.json` in den Lauf-Ordner.
+   Eine Anschrift (Name, Straße, PLZ, Ort) zählt dabei als **ein** Feld. Mit
+   `--adressen-einzeln` entsteht zum Vergleich zusätzlich die feldweise Zählung
+   (`labels_adressen_einzeln*.json(l)`).
 
 5. **Ergebnisse committen**: `git add data && git commit && git push`.
 

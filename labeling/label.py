@@ -16,6 +16,13 @@ und bei ``halluziniert`` einen automatisch vorgeschlagenen Fehlertyp:
 
 Die Fehlertypen sind eine Heuristik; die Taxonomie wird anhand der
 beobachteten Fehler verfeinert und Grenzfälle werden manuell geprüft.
+
+Bewertungseinheit Anschrift (Entscheidung nach dem Vorversuch): Eine
+Anschrift (Name, Straße, PLZ, Ort) zählt als EIN Feld und ist nur korrekt,
+wenn alle vier Teile stimmen. Sonst würde z. B. eine einzige vertauschte
+Zuordnung von Lieferant und Kunde als acht Fehler gezählt. Die Teilfelder
+bleiben im Feld ``detail`` nachvollziehbar. Mit ``--adressen-einzeln``
+lässt sich die feldweise Zählung zum Vergleich weiterhin erzeugen.
 """
 
 from __future__ import annotations
@@ -50,6 +57,12 @@ FIELDS = {
         "verguetung_intervall": "intervall", "verlaengerung": "verl",
     },
 }
+
+ANSCHRIFT_FELDER = {"lieferant", "kunde", "auftraggeber", "auftragnehmer"}
+
+# Reihenfolge, nach der bei mehreren fehlerhaften Teilfeldern einer Anschrift
+# der Fehlertyp der ganzen Anschrift gewählt wird (schwerster zuerst)
+_TYP_PRIORITAET = ["erfunden", "vertauscht", "verfaelscht", "rechen_logik", "format_schema"]
 
 # Werte, die das Modell rechnen oder ableiten müsste
 DERIVED = {"netto", "ust_betrag", "brutto", "vertragsende"}
@@ -214,14 +227,64 @@ def label_document(run_id, doc_id, doc_type, gt: dict, parsed: dict | None, doc_
     return labels
 
 
+def merge_addresses(labels: list[FieldLabel], gt: dict, parsed: dict | None) -> list[FieldLabel]:
+    """Fasst die vier Teilfelder jeder Anschrift zu einem Label zusammen."""
+    parsed = parsed or {}
+    out: list[FieldLabel | str] = []
+    groups: dict[str, list[FieldLabel]] = {}
+    for lab in labels:
+        prefix = lab.field.split(".")[0]
+        if prefix in ANSCHRIFT_FELDER and "." in lab.field:
+            if prefix not in groups:
+                groups[prefix] = []
+                out.append(prefix)  # Platzhalter, damit die Reihenfolge erhalten bleibt
+            groups[prefix].append(lab)
+        else:
+            out.append(lab)
+
+    def norm_addr(a) -> tuple | None:
+        if not isinstance(a, dict):
+            return None
+        return tuple(N.compact(a.get(k)) if k == "plz" else N.text(a.get(k)) for k in ANSCHRIFT)
+
+    result: list[FieldLabel] = []
+    for item in out:
+        if isinstance(item, FieldLabel):
+            result.append(item)
+            continue
+        prefix, teile = item, groups[item]
+        first = teile[0]
+        lab = FieldLabel(first.run_id, first.doc_id, first.doc_type, prefix, gt.get(prefix), parsed.get(prefix), "korrekt")
+        falsch = [t for t in teile if t.status == "halluziniert"]
+        unklar = [t for t in teile if t.status == "manuell_pruefen"]
+        if falsch:
+            lab.status = "halluziniert"
+            ext = norm_addr(parsed.get(prefix))
+            andere = [p for p in ANSCHRIFT_FELDER if p != prefix and ext is not None and ext == norm_addr(gt.get(p))]
+            if andere:
+                lab.fehlertyp, lab.detail = "vertauscht", f"ganze Anschrift gehört zu {andere[0]}"
+            else:
+                typen = [t.fehlertyp for t in falsch]
+                lab.fehlertyp = min(typen, key=lambda t: (-typen.count(t), _TYP_PRIORITAET.index(t)))
+                lab.detail = "; ".join(f"{t.field.split('.', 1)[1]}: {t.fehlertyp} ({t.detail})" for t in falsch)
+        elif unklar:
+            lab.status, lab.detail = "manuell_pruefen", "; ".join(t.field for t in unklar)
+        result.append(lab)
+    return result
+
+
 def _json_default(o):
     if isinstance(o, date):
         return o.isoformat()
     return str(o)
 
 
-def label_run(run_dir: Path, dataset_dir: Path) -> dict:
-    """Labelt alle Dokumente eines Laufs und schreibt labels.jsonl und labels_summary.json."""
+def label_run(run_dir: Path, dataset_dir: Path, adressen_einzeln: bool = False) -> dict:
+    """Labelt alle Dokumente eines Laufs und schreibt labels.jsonl und labels_summary.json.
+
+    Mit adressen_einzeln=True werden Anschriften feldweise gezählt und die
+    Ergebnisse in labels_adressen_einzeln*.json(l) geschrieben (nur zum Vergleich).
+    """
     run = json.loads((run_dir / "run.json").read_text(encoding="utf-8"))
     records = [json.loads(line) for line in (run_dir / "extractions.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
 
@@ -234,9 +297,13 @@ def label_run(run_dir: Path, dataset_dir: Path) -> dict:
             unbrauchbar.append(r["doc_id"])
             continue
         doc_raw = (d / "document.txt").read_text(encoding="utf-8")
-        all_labels += label_document(run["run_id"], r["doc_id"], r["doc_type"], gt, r["parsed"], doc_raw)
+        labs = label_document(run["run_id"], r["doc_id"], r["doc_type"], gt, r["parsed"], doc_raw)
+        if not adressen_einzeln:
+            labs = merge_addresses(labs, gt, r["parsed"])
+        all_labels += labs
 
-    with open(run_dir / "labels.jsonl", "w", encoding="utf-8") as f:
+    stem = "labels_adressen_einzeln" if adressen_einzeln else "labels"
+    with open(run_dir / f"{stem}.jsonl", "w", encoding="utf-8") as f:
         for lab in all_labels:
             f.write(json.dumps(asdict(lab), ensure_ascii=False, default=_json_default) + "\n")
 
@@ -245,8 +312,9 @@ def label_run(run_dir: Path, dataset_dir: Path) -> dict:
         run_id=run["run_id"], model=run["model"]["name"], output_format=run["output_format"],
         gpu=run["environment"].get("gpu"), n_docs=len(records),
         n_unbrauchbar=len(unbrauchbar), unbrauchbar=unbrauchbar,
+        anschrift_als_einheit=not adressen_einzeln,
     )
-    (run_dir / "labels_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    (run_dir / f"{stem}_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     return summary
 
 
@@ -278,12 +346,14 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Labelt Extraktionsläufe gegen die Ground Truth.")
     ap.add_argument("runs", nargs="+", type=Path, help="Lauf-Ordner unter data/runs/")
     ap.add_argument("--dataset", type=Path, help="Datensatz-Ordner (Standard: aus run.json)")
+    ap.add_argument("--adressen-einzeln", action="store_true",
+                    help="Anschriften feldweise zählen (nur zum Vergleich, eigene Ausgabedateien)")
     args = ap.parse_args()
 
     for run_dir in args.runs:
         run = json.loads((run_dir / "run.json").read_text(encoding="utf-8"))
         ds = args.dataset or Path(run["dataset"]["path"])
-        s = label_run(run_dir, ds)
+        s = label_run(run_dir, ds, adressen_einzeln=args.adressen_einzeln)
         g = s["gesamt"]
         print(f"{s['run_id']}  [{s['model']}, {s['output_format']}, {s['gpu']}]")
         print(f"  unbrauchbar: {s['n_unbrauchbar']}/{s['n_docs']}  |  Felder: {g['felder']}  "

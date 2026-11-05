@@ -71,3 +71,29 @@ def test_frist_ohne_zeitpunkt_ist_unvollstaendig():
     gt = {"vertragsnummer": "DV-1", "kuendigungsfrist": "4 Wochen zum Monatsende"}
     labs = {x.field: x for x in label_document("r", "d", "vertrag", gt, {**gt, "kuendigungsfrist": "4 Wochen"}, "")}
     assert labs["kuendigungsfrist"].fehlertyp == "verfaelscht"
+
+
+def _merged(**changes):
+    from labeling.label import merge_addresses
+
+    ext = {**GT, **changes}
+    return {x.field: x for x in merge_addresses(label_document("r", "d", "rechnung", GT, ext, DOC), GT, ext)}
+
+
+def test_anschrift_als_einheit_korrekt():
+    labs = _merged()
+    assert labs["lieferant"].status == "korrekt" and labs["kunde"].status == "korrekt"
+    assert not any(k.startswith(("lieferant.", "kunde.")) for k in labs)
+
+
+def test_vertauschte_anschriften_zaehlen_zweimal_statt_achtmal():
+    labs = _merged(lieferant=GT["kunde"], kunde=GT["lieferant"])
+    falsch = [x for x in labs.values() if x.status == "halluziniert"]
+    assert [x.field for x in falsch] == ["lieferant", "kunde"]
+    assert all(x.fehlertyp == "vertauscht" for x in falsch)
+
+
+def test_ein_falsches_teilfeld_macht_anschrift_falsch():
+    labs = _merged(kunde={**GT["kunde"], "plz": "60312"})
+    assert labs["kunde"].status == "halluziniert"
+    assert "plz" in labs["kunde"].detail
