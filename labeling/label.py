@@ -149,7 +149,10 @@ def _in_doc(kind, val, doc: str) -> bool:
     if kind == "date":
         return N.date_in_doc(val, doc)
     if kind in ("text", "id", "free"):
-        return N.string_in_doc(str(val), doc)
+        if N.string_in_doc(str(val), doc):
+            return True
+        d = N.to_date(val)  # z. B. Vertragsbeginn "2026-01-01" als Vertragsnummer ausgegeben
+        return d is not None and N.date_in_doc(d, doc)
     return False
 
 
