@@ -1,0 +1,199 @@
+{
+  "gesamt": {
+    "felder": 390,
+    "halluziniert": 52,
+    "manuell_pruefen": 5,
+    "rate": 0.133
+  },
+  "je_dokumenttyp": {
+    "rechnung": {
+      "felder": 270,
+      "halluziniert": 26,
+      "manuell_pruefen": 0,
+      "rate": 0.096
+    },
+    "vertrag": {
+      "felder": 120,
+      "halluziniert": 26,
+      "manuell_pruefen": 5,
+      "rate": 0.217
+    }
+  },
+  "je_fehlertyp": {
+    "vertauscht": 25,
+    "verfaelscht": 14,
+    "format_schema": 13
+  },
+  "je_feld": {
+    "rechnung:bestellnummer": {
+      "felder": 10,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.1
+    },
+    "rechnung:bic": {
+      "felder": 10,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.1
+    },
+    "rechnung:brutto": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:iban": {
+      "felder": 10,
+      "halluziniert": 1,
+      "manuell_pruefen": 0,
+      "rate": 0.1
+    },
+    "rechnung:kunde": {
+      "felder": 10,
+      "halluziniert": 9,
+      "manuell_pruefen": 0,
+      "rate": 0.9
+    },
+    "rechnung:leistungsdatum": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:lieferant": {
+      "felder": 10,
+      "halluziniert": 8,
+      "manuell_pruefen": 0,
+      "rate": 0.8
+    },
+    "rechnung:lieferant_ust_id": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:netto": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:positionen.*": {
+      "felder": 130,
+      "halluziniert": 6,
+      "manuell_pruefen": 0,
+      "rate": 0.046
+    },
+    "rechnung:rechnungsdatum": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:rechnungsnummer": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:ust_betrag": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:ust_satz": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "rechnung:zahlungsziel_tage": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:auftraggeber": {
+      "felder": 10,
+      "halluziniert": 2,
+      "manuell_pruefen": 0,
+      "rate": 0.2
+    },
+    "vertrag:auftragnehmer": {
+      "felder": 10,
+      "halluziniert": 2,
+      "manuell_pruefen": 0,
+      "rate": 0.2
+    },
+    "vertrag:kuendigungsfrist": {
+      "felder": 10,
+      "halluziniert": 5,
+      "manuell_pruefen": 2,
+      "rate": 0.5
+    },
+    "vertrag:laufzeit_monate": {
+      "felder": 10,
+      "halluziniert": 3,
+      "manuell_pruefen": 0,
+      "rate": 0.3
+    },
+    "vertrag:leistungsgegenstand": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 1,
+      "rate": 0.0
+    },
+    "vertrag:verguetung_intervall": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 2,
+      "rate": 0.0
+    },
+    "vertrag:verguetung_netto": {
+      "felder": 10,
+      "halluziniert": 2,
+      "manuell_pruefen": 0,
+      "rate": 0.2
+    },
+    "vertrag:verlaengerung": {
+      "felder": 10,
+      "halluziniert": 5,
+      "manuell_pruefen": 0,
+      "rate": 0.5
+    },
+    "vertrag:vertragsbeginn": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:vertragsdatum": {
+      "felder": 10,
+      "halluziniert": 7,
+      "manuell_pruefen": 0,
+      "rate": 0.7
+    },
+    "vertrag:vertragsende": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    },
+    "vertrag:vertragsnummer": {
+      "felder": 10,
+      "halluziniert": 0,
+      "manuell_pruefen": 0,
+      "rate": 0.0
+    }
+  },
+  "run_id": "20261103-1714_vorversuch3_qwen2.5-1.5b_t0_s42",
+  "model": "qwen2.5:1.5b",
+  "output_format": "schema_text",
+  "gpu": "NVIDIA A10",
+  "n_docs": 20,
+  "n_unbrauchbar": 0,
+  "unbrauchbar": [],
+  "anschrift_als_einheit": true
+}

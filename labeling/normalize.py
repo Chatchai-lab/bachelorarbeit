@@ -53,6 +53,8 @@ def _parse_token(tok: str) -> float | None:
             tok = tok.replace(",", ".")
         elif all(len(p) == 3 for p in parts[1:]):
             tok = tok.replace(",", "")
+        elif len(parts) > 2 and len(parts[-1]) <= 2 and all(len(p) == 3 for p in parts[1:-1]):
+            tok = "".join(parts[:-1]) + "." + parts[-1]  # "2,723,04" -> 2723.04
         else:
             return None
     elif "." in tok:

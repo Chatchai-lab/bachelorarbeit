@@ -198,10 +198,14 @@ def label_document(run_id, doc_id, doc_type, gt: dict, parsed: dict | None, doc_
             lab.status, lab.detail = "manuell_pruefen", "Freitext"
         elif en is None:
             lab.status, lab.fehlertyp, lab.detail = "halluziniert", "format_schema", (
-                "Feld fehlt" if e is _MISSING else "null statt Wert"
+                "Feld fehlt in der Ausgabe" if e is _MISSING else "ausgelassen (null, obwohl im Dokument)"
             )
         elif gn is None:
-            lab.status, lab.fehlertyp, lab.detail = "halluziniert", "erfunden", "Wert ohne Grundlage im Dokument"
+            lab.status = "halluziniert"
+            if _in_doc(kind, en, doc):  # z. B. Kundennummer als Bestellnummer ausgegeben
+                lab.fehlertyp, lab.detail = "vertauscht", "Feld fehlt im Dokument, Wert stammt aus anderer Angabe"
+            else:
+                lab.fehlertyp, lab.detail = "erfunden", "Wert ohne Grundlage im Dokument"
         elif name in PROMPT_BEISPIELE and _normalize(kind, PROMPT_BEISPIELE[name])[0] == en:
             lab.status, lab.fehlertyp, lab.detail = "halluziniert", "erfunden", "Prompt-Beispiel übernommen"
         elif kind == "text" and (en in gn or gn in en):
