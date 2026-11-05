@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0008",
+  "doc_type": "vertrag",
+  "run_id": "20261105-1420_vorversuch3_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"DV-2025-8168\",\n  \"vertragsdatum\": \"07.03.2025\",\n  \"auftraggeber\": {\n    \"name\": \"Brunhilde Fiebig Malte Junken\",\n    \"strasse\": \"Perleberg\",\n    \"plz\": \"66498\",\n    \"ort\": \"Perleberg\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Weller AG & Co. KGaA\",\n    \"strasse\": \"Freia-Schuchhardt-Weg 33-83\",\n    \"plz\": \"66498\",\n    \"ort\": \"Staßfurt\"\n  },\n  \"leistungsgegenstand\": \"Winterdienst\",\n  \"vertragsbeginn\": \"07.03.2025\",\n  \"laufzeit_monate\": \"12\",\n  \"vertragsende\": \"31.03.2026\",\n  \"kuendigungsfrist\": \"Quartalsende\",\n  \"verguetung_netto\": \"1.699,22\",\n  \"verguetung_intervall\": \"monatlich, vierteljährlich, jährlich\",\n  \"verlaengerung\": \"4,50\"\n}",
+  "parsed": {
+    "vertragsnummer": "DV-2025-8168",
+    "vertragsdatum": "07.03.2025",
+    "auftraggeber": {
+      "name": "Brunhilde Fiebig Malte Junken",
+      "strasse": "Perleberg",
+      "plz": "66498",
+      "ort": "Perleberg"
+    },
+    "auftragnehmer": {
+      "name": "Weller AG & Co. KGaA",
+      "strasse": "Freia-Schuchhardt-Weg 33-83",
+      "plz": "66498",
+      "ort": "Staßfurt"
+    },
+    "leistungsgegenstand": "Winterdienst",
+    "vertragsbeginn": "07.03.2025",
+    "laufzeit_monate": "12",
+    "vertragsende": "31.03.2026",
+    "kuendigungsfrist": "Quartalsende",
+    "verguetung_netto": "1.699,22",
+    "verguetung_intervall": "monatlich, vierteljährlich, jährlich",
+    "verlaengerung": "4,50"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1228.1,
+  "total_ms": 1227.0,
+  "load_ms": 1.5,
+  "prompt_eval_ms": 33.1,
+  "eval_ms": 1156.6,
+  "prompt_tokens": 1223,
+  "completion_tokens": 278,
+  "created_at": "2026-11-05T13:21:52+00:00"
+}

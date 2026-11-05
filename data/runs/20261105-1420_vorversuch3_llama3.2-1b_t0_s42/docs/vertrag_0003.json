@@ -1,0 +1,42 @@
+{
+  "doc_id": "vertrag_0003",
+  "doc_type": "vertrag",
+  "run_id": "20261105-1420_vorversuch3_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"vertragsnummer\": \"2026-01-01\",\n  \"vertragsdatum\": \"11.11.2025\",\n  \"auftraggeber\": {\n    \"name\": \"Süßebier\",\n    \"strasse\": \"Zirmestraße 8-2\",\n    \"plz\": \"71338\",\n    \"ort\": \"Steinfurt\"\n  },\n  \"auftragnehmer\": {\n    \"name\": \"Hahn Gorlitz AG\",\n    \"strasse\": \"Ehlertallee 3/4\",\n    \"plz\": \"62362\",\n    \"ort\": \"Lobenstein\"\n  },\n  \"leistungsgegenstand\": \"Datenschutzbeauftragter\",\n  \"vertragsbeginn\": \"01.01.2026\",\n  \"laufzeit_monate\": \"36\",\n  \"vertragsende\": \"31.12.2028\",\n  \"kuendigungsfrist\": \"6 Monate\",\n  \"verguetung_netto\": \"2995,67\",\n  \"verguetung_intervall\": \"monatlich\",\n  \"verlaengerung\": \"nur für wichtigstes Grund\"\n}",
+  "parsed": {
+    "vertragsnummer": "2026-01-01",
+    "vertragsdatum": "11.11.2025",
+    "auftraggeber": {
+      "name": "Süßebier",
+      "strasse": "Zirmestraße 8-2",
+      "plz": "71338",
+      "ort": "Steinfurt"
+    },
+    "auftragnehmer": {
+      "name": "Hahn Gorlitz AG",
+      "strasse": "Ehlertallee 3/4",
+      "plz": "62362",
+      "ort": "Lobenstein"
+    },
+    "leistungsgegenstand": "Datenschutzbeauftragter",
+    "vertragsbeginn": "01.01.2026",
+    "laufzeit_monate": "36",
+    "vertragsende": "31.12.2028",
+    "kuendigungsfrist": "6 Monate",
+    "verguetung_netto": "2995,67",
+    "verguetung_intervall": "monatlich",
+    "verlaengerung": "nur für wichtigstes Grund"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1125.3,
+  "total_ms": 1124.2,
+  "load_ms": 2.0,
+  "prompt_eval_ms": 35.0,
+  "eval_ms": 1057.6,
+  "prompt_tokens": 1273,
+  "completion_tokens": 263,
+  "created_at": "2026-11-05T13:21:41+00:00"
+}

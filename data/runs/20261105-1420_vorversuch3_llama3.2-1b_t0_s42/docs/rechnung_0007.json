@@ -1,0 +1,67 @@
+{
+  "doc_id": "rechnung_0007",
+  "doc_type": "rechnung",
+  "run_id": "20261105-1420_vorversuch3_llama3.2-1b_t0_s42",
+  "model": "llama3.2:1b",
+  "gpu": "NVIDIA A10",
+  "raw_output": "{\n  \"rechnungsnummer\": \"R251633\",\n  \"rechnungsdatum\": \"05.08.2025\",\n  \"leistungsdatum\": \"15.07.2025\",\n  \"lieferant\": {\n    \"name\": \"Kroker\",\n    \"strasse\": \"Trudel-Steinberg-Allee 45\",\n    \"plz\": \"23934\",\n    \"ort\": \"Hoyerswerda\"\n  },\n  \"lieferant_ust_id\": \"DE618153123\",\n  \"kunde\": {\n    \"name\": \"Thanel\",\n    \"strasse\": \"Netteplatz 10/13\",\n    \"plz\": \"58721\",\n    \"ort\": \"Dinslaken\"\n  },\n  \"positionen\": [\n    {\n      \"beschreibung\": \"Mittagsbuffet, je Person\",\n      \"menge\": \"12\",\n      \"einheit\": \"Person\",\n      \"einzelpreis\": \"18,64 €\",\n      \"gesamtpreis\": \"223,68 €\"\n    },\n    {\n      \"beschreibung\": \"Servicepersonal 4 Std.\",\n      \"menge\": \"4\",\n      \"einheit\": \"Std.\",\n      \"einzelpreis\": \"36,68 €\",\n      \"gesamtpreis\": \"146,72 €\"\n    },\n    {\n      \"beschreibung\": \"Geschirr- und Besteckmiete 1 Pauschale\",\n      \"menge\": \"1\",\n      \"einheit\": \"Pauschale\",\n      \"einzelpreis\": \"72,81 €\",\n      \"gesamtpreis\": \"72,81 €\"\n    }\n  ],\n  \"netto\": \"443,21 €\",\n  \"ust_satz\": \"7 %\",\n  \"ust_betrag\": \"31,02 €\",\n  \"brutto\": \"474,23 €\",\n  \"zahlungsziel_tage\": \"30 Tage\",\n  \"bestellnummer\": \"R251633\",\n  \"iban\": \"DE618153123\",\n  \"bic\": \"DE618153123\" }",
+  "parsed": {
+    "rechnungsnummer": "R251633",
+    "rechnungsdatum": "05.08.2025",
+    "leistungsdatum": "15.07.2025",
+    "lieferant": {
+      "name": "Kroker",
+      "strasse": "Trudel-Steinberg-Allee 45",
+      "plz": "23934",
+      "ort": "Hoyerswerda"
+    },
+    "lieferant_ust_id": "DE618153123",
+    "kunde": {
+      "name": "Thanel",
+      "strasse": "Netteplatz 10/13",
+      "plz": "58721",
+      "ort": "Dinslaken"
+    },
+    "positionen": [
+      {
+        "beschreibung": "Mittagsbuffet, je Person",
+        "menge": "12",
+        "einheit": "Person",
+        "einzelpreis": "18,64 €",
+        "gesamtpreis": "223,68 €"
+      },
+      {
+        "beschreibung": "Servicepersonal 4 Std.",
+        "menge": "4",
+        "einheit": "Std.",
+        "einzelpreis": "36,68 €",
+        "gesamtpreis": "146,72 €"
+      },
+      {
+        "beschreibung": "Geschirr- und Besteckmiete 1 Pauschale",
+        "menge": "1",
+        "einheit": "Pauschale",
+        "einzelpreis": "72,81 €",
+        "gesamtpreis": "72,81 €"
+      }
+    ],
+    "netto": "443,21 €",
+    "ust_satz": "7 %",
+    "ust_betrag": "31,02 €",
+    "brutto": "474,23 €",
+    "zahlungsziel_tage": "30 Tage",
+    "bestellnummer": "R251633",
+    "iban": "DE618153123",
+    "bic": "DE618153123"
+  },
+  "parse_error": null,
+  "done_reason": "stop",
+  "wall_ms": 1808.1,
+  "total_ms": 1806.7,
+  "load_ms": 1.9,
+  "prompt_eval_ms": 21.0,
+  "eval_ms": 1761.7,
+  "prompt_tokens": 818,
+  "completion_tokens": 459,
+  "created_at": "2026-11-05T13:21:25+00:00"
+}
