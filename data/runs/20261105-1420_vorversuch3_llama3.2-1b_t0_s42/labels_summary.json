@@ -20,10 +20,10 @@
     }
   },
   "je_fehlertyp": {
-    "vertauscht": 46,
+    "vertauscht": 35,
     "verfaelscht": 26,
-    "format_schema": 4,
-    "erfunden": 3
+    "erfunden": 14,
+    "format_schema": 4
   },
   "je_feld": {
     "rechnung:bestellnummer": {

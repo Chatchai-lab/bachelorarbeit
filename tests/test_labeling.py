@@ -103,8 +103,9 @@ def test_komma_als_tausender_und_dezimaltrenner():
     assert number("2,723,04 €") == 2723.04 and number("1.262.45 €") == 1262.45
 
 
-def test_luecke_mit_wert_aus_anderer_angabe_ist_vertauscht():
+def test_luecke_mit_wert_aus_anderer_angabe_ist_erfunden():
     gt = {**GT, "bestellnummer": None}
     ext = {**gt, "rechnungsdatum": "05.03.2026", "bestellnummer": "KD-12345"}
     labs = {x.field: x for x in label_document("r", "d", "rechnung", gt, ext, DOC)}
-    assert labs["bestellnummer"].fehlertyp == "vertauscht"
+    assert labs["bestellnummer"].fehlertyp == "erfunden"
+    assert "anderer Angabe" in labs["bestellnummer"].detail
